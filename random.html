@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizador</title>
+    <link rel="stylesheet" href="/css/styles2.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <div class="menu-bar">
+                <div class="logo"><img src="/src/logoKrexxo.png" alt="LogoKrexxo"> Krexxo 7ds</div>
+                <nav class="items">
+                    <a href="index.html">Inicio</a>
+                    <a href="#">Personajes</a>
+                    <a href="#">Guías</a>
+                    <a href="#">Galería</a>
+                    <a href="#">Comunidad</a>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="botonIzquierdo">
+        <button class="botonLeft" data-grade="LR"><img src="/Grade/lr.png" alt="LR"></button>
+        <button class="botonLeft" data-grade="UR"><img src="/Grade/ur.png" alt="UR"></button>
+        <button class="botonLeft" data-grade="SSR"><img src="/Grade/ssr.png" alt="SSR"></button>
+        <button class="botonLeft" data-grade="SR"><img src="/Grade/sr.png" alt="SR"></button>
+        <button class="botonLeft" data-grade="R"><img src="/Grade/r.png" alt="R"></button>
+    </div>
+    <button class="combinacion1">
+        <img src="/botones/7.png" alt="Botón Activar Múltiples Filtros" class="boton-imagen">
+    </button>
+    <button class="combinacion2">
+        <img src="/botones/14.png" alt="Botón Agrupar" class="boton-agrupar">
+    </button>
+    <div class="ban-buttons-container">
+        <button class="combinacion3"></button>
+        <button class="combinacion4">BAN</button>
+    </div>
+    <div class="botonDerecho">
+        <button class="botonRight" data-race="demon"><img src="/Race/race_demon.png" alt="Demon"></button>
+        <button class="botonRight" data-race="giant"><img src="/Race/race_giant.png" alt="Giant"></button>
+        <button class="botonRight" data-race="human"><img src="/Race/race_human.png" alt="Human"></button>
+        <button class="botonRight" data-race="fairy"><img src="/Race/race_fairy.png" alt="Fairy"></button>
+        <button class="botonRight" data-race="goddess"><img src="/Race/race_goddess.png" alt="Goddess"></button>
+        <button class="botonRight" data-race="unknown"><img src="/Race/race_unknown.png" alt="Unknown"></button>
+    </div>
+    <div class="atributos">
+        <button class="botonAtributo" data-attribute="red"><img src="/Atributos/attribute_strength.png" alt="Botón 1"></button>
+        <button class="botonAtributo" data-attribute="green"><img src="/Atributos/attribute_hp.png" alt="Botón 1"></button>
+        <button class="botonAtributo" data-attribute="blue"><img src="/Atributos/attribute_speed.png" alt="Botón 1"></button>
+        <button class="botonAtributo" data-attribute="dark"><img src="/Atributos/attribute_dark.png" alt="Botón 1"></button>
+        <button class="botonAtributo" data-attribute="light"><img src="/Atributos/attribute_light.png" alt="Botón 1"></button>
+        <div class="generes">
+            <button class="botongenere" data-gen="male"><img src="/genere/male.png" alt="Botón 1"></button>
+            <button class="botongenere" data-gen="female"><img src="/genere/female.png" alt="Botón 1"></button>
+        </div>
+    </div>
+    <button id="reset-filters-btn" class="reset-filters">
+        <img src="/botones/5.png" alt="Quitar Filtros">
+    </button>
+    <div class="personajes" id="main-characters-container">
+        <button class="character-card" data-grade="LR" data-race="goddess" data-attribute="blue" data-char="arcang"
+            data-gen="female">
+            <img src="/7ds Personajes/Covenant of Light Ludociel - Velocidad - LR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <buttom class="character-card" data-grade="LR" data-race="demon" data-attribute="blue" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Zeldris - Velocidad - LR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </buttom>
+        <buttom class="character-card" data-grade="UR" data-race="demon goddess" data-attribute="light" data-char="sins"
+            data-gen="female male">
+            <img src="/7ds Personajes/Elizabeth & Meliodas - Luz - UR - Diosa_Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </buttom>
+        <button class="character-card" data-grade="LR" data-race="fairy" data-attribute="green" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Gloxinia - PS - LR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="LR" data-race="demon" data-attribute="blue" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Galland - Velocidad - LR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="LR" data-race="giant" data-attribute="red" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Queen Diane - Fuerza - LR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="LR" data-race="human" data-attribute="green" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Escanor - PS - LR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="LR" data-race="demon" data-attribute="red" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Lostvayne Meliodas - Fuerza - LR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="LR" data-race="fairy" data-attribute="blue" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/King - Velocidad - LR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="LR" data-race="goddess" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Elizabeth - Fuerza - LR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="LR" data-race="human" data-attribute="red" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Lillia of Desire - Fuerza - LR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="red" data-char="arcang"
+            data-gen="female">
+            <img src="/7ds Personajes/Covenant of Light Ludociel - Fuerza - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="rag"
+            data-gen="male">
+            <img src="/7ds Personajes/Sigurd - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Truth Seeker Merlin - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="rag"
+            data-gen="male">
+            <img src="/7ds Personajes/Prince Sigurd - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Chandler - Fuerza - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="green" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Executioner Zeldris - PS - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Valenti of Obsession - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="green" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Assault Mode Meliodas - HP - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Nanashi - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="green" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Small Winged King - PS - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="blue" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Small Winged King - Velocidad - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="red" data-char="arcang"
+            data-gen="male">
+            <img src="/7ds Personajes/Sariel - Fuerza - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="blue" data-char="arcang"
+            data-gen="male">
+            <img src="/7ds Personajes/Tarmiel - Velocidad - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="green" data-char="arcang"
+            data-gen="male">
+            <img src="/7ds Personajes/Ludociel - PS - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="blue" data-char="arcang"
+            data-gen="male">
+            <img src="/7ds Personajes/Ludociel - Velocidad - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Goddess Elizabeth - Velocidad - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="green" data-gen="female">
+            <img src="/7ds Personajes/Ellatte - PS - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="UR" data-race="human fairy" data-attribute="blue" data-char="jinetes"
+            data-gen="male">
+            <img src="/7ds Personajes/Young Knight Lancelot - Velocidad - SSR - Humano_Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Demiurge - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="UR" data-race="unknown" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Sabunak - Fuerza - UR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="UR" data-race="human" data-attribute="green" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/urg_portrait (1).png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="UR" data-race="unknown" data-attribute="red" data-char="sins">
+            <img src="/7ds Personajes/Wandering Knight Gowther - Velocidad - UR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Gelda - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="UR" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/urg_portrait.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Jue Viole Grace - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="UR" data-race="demon" data-attribute="blue" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/urb_portrait.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="light" data-gen="female">
+            <img src="/7ds Personajes/Queen Elizabeth - Luz - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Shalltear - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Albedo - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="red" data-char="comn"
+            data-gen="female">
+            <img src="/7ds Personajes/Derieri - Fuerza - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="blue" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Drole - Velocidad - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="dark" data-char="god rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Hel - Oscuridad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="dark" data-gen="male">
+            <img src="/7ds Personajes/Demon King - Oscuridad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="jinetes"
+            data-gen="male">
+            <img src="/7ds Personajes/Tristan - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="light" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Transcendent Ban - Luz - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="green" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Monspeet - HP - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="light" data-char="arcang"
+            data-gen="male">
+            <img src="/7ds Personajes/Mael - Luz - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="god rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Freyja - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="dark" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Purgatory Meliodas - Oscuridad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="light" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Ultimate EscanorUltimate Escanor - Luz - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Highest-Ranking Demon Cusack - Velocidad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="green" data-char="comn"
+            data-gen="female">
+            <img src="/7ds Personajes/Melascula - PS - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="blue" data-char="comn"
+            data-gen="female">
+            <img src="/7ds Personajes/Melascula - Velocidad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Mage of Infinity Merlin - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Prince of Darkness Zeldris - Velocidad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="red" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Berserk Estarossa - Fuerza - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="blue" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Berserk Estarossa - Velocidad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-char="god rag"
+            data-gen="male">
+            <img src="/7ds Personajes/Freyr - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="red" data-char="arcang"
+            data-gen="male">
+            <img src="/7ds Personajes/Covenant of Light Tarmiel - Fuerza - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="green" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Queen Diane - PS - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="red" data-char="rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Skadi - Fuerza - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="green" data-char="arcang"
+            data-gen="male">
+            <img src="/7ds Personajes/Covenant of Light Sariel - PS - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="light" data-gen="female">
+            <img src="/7ds Personajes/Elizabeth of Eternal Rebirth - Luz - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="dark" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Traitor Meliodas - Oscuridad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Megellda - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="sins">
+            <img src="/7ds Personajes/Hijack Gowther - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="red" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/King - Fuerza - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="blue" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Meliodas - Velocidad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Cusack - Velocidad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="sins rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Truth Seeker Merlin - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Truth Seeker Merlin - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Thonar - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Thonar - PS - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Excalibur Arthur - PS - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Excalibur Arthur - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Chandler - Velocidad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Ram - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Valenti of Obsession - PS - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Liz - Velocidad - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Liz - Fuerza - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="green" data-gen="female">
+            <img src="/7ds Personajes/Liz - HP - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="green" data-gen="female">
+            <img src="/7ds Personajes/Golden Wings Elaine - PS - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Kyo - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Hendrickson - HP - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="green" data-gen="female">
+            <img src="/7ds Personajes/Gerharde - HP - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Hawk - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Hawk - HP - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Mikasa - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="blue" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Eren - Velocidad - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Zaratras - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-gen="female">
+            <img src="/7ds Personajes/Zaneri - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Bellion - Velocidad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Ellatte - Velocidad - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Ellatte - Fuerza - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Camila - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Camila - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="catas"
+            data-gen="male">
+            <img src="/7ds Personajes/Shin - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="catas"
+            data-gen="male">
+            <img src="/7ds Personajes/Shin - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Eastin - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Arden - Velocidad - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Deldry - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Dogedo - Fuerza - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Deathpierce - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Narberal Gamma - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="UR" data-race="unknown" data-attribute="blue" data-char="god rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Thor - Velocidad - UR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Eris - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Cocytus - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Ainz Ooal Gown - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="red" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Zeldris - Fuerza - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="green" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Estarossa - HP - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="red" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Estarossa - Fuerza - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="blue" data-char="comn"
+            data-gen="female">
+            <img src="/7ds Personajes/Derieri - Velocidad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="green" data-char="comn"
+            data-gen="female">
+            <img src="/7ds Personajes/Derieri - HP - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Fraudrin - Velocidad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Fraudrin - HP - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="green" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Drole - HP - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="red" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Gloxinia - Fuerza - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-char="god god"
+            data-gen="male">
+            <img src="/7ds Personajes/Tyr - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="red" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Monspeet - Fuerza - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Roxy of Madness - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Kizuna - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="red" data-char="comn"
+            data-gen="female">
+            <img src="/7ds Personajes/Melascula - Fuerza - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Mage of Infinity Merlin - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="green">
+            <img src="/7ds Personajes/Highest-Ranking Demon Chandler - PS - SSR - Demonio.png" alt="Personaje 1"
+                data-gen="male">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Iron Blood Mono - PS - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="red" data-char="comn"
+            data-gen="male">
+            <img src="/7ds Personajes/Galland - Fuerza - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Jormungandr - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Escanor - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="green" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Fairy King Harlequin - PS - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="blue" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Fairy King Harlequin - Velocidad - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-char="rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Megellda - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Eastin of Authority - PS - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Brunilda - PS - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="red" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Blessing of Earth Diane - Fuerza - SSR - Gigantes.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="green" data-char="sins rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Blessing of Earth Diane - PS - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="unknown" data-attribute="green" data-char="collab">
+            <img src="/7ds Personajes/Rimuru - HP - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="red" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Old Fart King - Fuerza - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="blue" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Old Fart King - Velocidad - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="sins rag"
+            data-gen="male">
+            <img src="/7ds Personajes/Ban - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="red" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Ban - Fuerza - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Ban - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Adventurer Ban - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="green" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Small Diane - HP - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="blue" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Small Diane - Velocidad - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Elizabeth & Hawk - Velocidad - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="goddess" data-attribute="green" data-gen="female">
+            <img src="/7ds Personajes/Elizabeth & Hawk - HP - SR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="goddess" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Elizabeth & Hawk - Fuerza - SR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="blue" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Demon Meliodas - Velocidad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="red" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Demon Meliodas - Fuerza - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Matrona - Fuerza - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Arthur - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Arthur - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Arthur - Velocidad - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Arthur - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="blue" data-char="sins rag"
+            data-gen="male">
+            <img src="/7ds Personajes/Lostvayne Meliodas - Velocidad - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="green" data-gen="female">
+            <img src="/7ds Personajes/Elaine - HP - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="R" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Taizoo - Fuerza - R - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Dreyfus - Fuerza - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Dreyfus - HP - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Hendrickson - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Hendrickson - HP - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Vivian - Fuerza - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="green" data-gen="female">
+            <img src="/7ds Personajes/Jillian - HP - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="R" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Hugo - HP - R - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Weinheidt - Velocidad - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="R" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Simon - Fuerza - R - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Slater - Fuerza - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Slater - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Gustaf - HP - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="R" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Marmas - Velocidad - R - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Cain - HP - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Freesia - Velocidad - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="R" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Jude - Fuerza - R - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="R" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Ruin - HP - R - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="R" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Golgius - Velocidad - R - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="R" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Twigo - Fuerza - R - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="R" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Alioni - HP - R - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Merlin - HP - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Merlin - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Merlin - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Helbram - Velocidad - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Helbram - HP - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Jericho - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-gen="female">
+            <img src="/7ds Personajes/Jericho - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Jericho - Fuerza - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Jericho - Velocidad - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Griamore - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Griamore - Fuerza - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Griamore - Velocidad - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Howzer - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Howzer - Velocidad - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Howzer - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Howzer - HP - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Guila - Velocidad - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Gilthunder - HP - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Gilthunder - Velocidad - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="sins">
+            <img src="/7ds Personajes/Gowther - HP - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="unknown" data-attribute="green" data-char="sins">
+            <img src="/7ds Personajes/Gowther - HP - SR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-char="sins">
+            <img src="/7ds Personajes/Gowther - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="bluee" data-char="sins">
+            <img src="/7ds Personajes/Gowther - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="green" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/King - HP - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Adventurer Ban - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="giant" data-attribute="red" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Diane - Fuerza - SR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="blue" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Diane - Velocidad - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="goddess" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Elizabeth - Fuerza - SR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Elizabeth - Velocidad - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="green" data-gen="female">
+            <img src="/7ds Personajes/Elizabeth - HP - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="green" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Meliodas - HP - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="demon" data-attribute="blue" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Meliodas - Velocidad - SR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Golden Wings Elaine - Velocidad - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Eastin - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Denzel - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Iron Blood Mono - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Terry - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Lillia - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Ban - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Purgatory Ban - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Valenti of Obsession - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Lillia of Desire - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="catas"
+            data-gen="male">
+            <img src="/7ds Personajes/Gamer Shin - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Eastin - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Valenti - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Matrona - Velocidad - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Helbram - Fuerza - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="green" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Diane - HP - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/The One Escanor - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Mai - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Jenna - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Wild - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-char="god rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Freyja - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Eastin of Authority - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Lillia - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Elizabeth & Hawk - Fuerza - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="green" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Demon Meliodas - HP - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Elaine - Fuerza - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Emilia - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Daughter of Belialuin Merlin - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Golden Wings Elaine - Fuerza - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Oslo & Hawk - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Oslo & Hawk - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Oslo & Hawk - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Rugal - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="goddess" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Goddess Elizabeth - Fuerza - SSR - Diosa.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Roxy - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Roxy - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Roxy - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Mono - PS - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Zena - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Roxy of Madness - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Raphtalia - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="blue" data-char="rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Skadi - Velocidad - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="green" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Protective Heart Diane - PS - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="rag"
+            data-gen="female">
+            <img src="/7ds Personajes/Brunilda - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Benimaru - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Milim - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="collab">
+            <img src="/7ds Personajes/Rimuru - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="green" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Old Fart King - HP - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="red" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Small Diane - Fuerza - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="green" data-gen="female">
+            <img src="/7ds Personajes/Matrona - PS - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Elaine - Velocidad - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-gen="female">
+            <img src="/7ds Personajes/Guila - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Guila - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Gilthunder - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Adventurer Ban - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="giant" data-attribute="red" data-char="sins"
+            data-gen="female">
+            <img src="/7ds Personajes/Diane - Fuerza - SSR - Gigante.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="demon" data-attribute="red" data-char="sins"
+            data-gen="male">
+            <img src="/7ds Personajes/Meliodas - Fuerza - SSR - Demonio.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="red" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Rem - Fuerza - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Jim - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Athena - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Levi - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Mono - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Mono - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Valenti - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="jinetes"
+            data-gen="male">
+            <img src="/7ds Personajes/Percival - PS - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Levi - PS - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Slater - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Jericho - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-gen="male">
+            <img src="/7ds Personajes/Griamore - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="UR" data-race="human" data-attribute="red" data-gen="male">
+            <img src="/7ds Personajes/Retired Knight Varghese - Fuerza - UR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Beatrice - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Will - PS - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Mike - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Eleven - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Eren - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="fairy" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/One-Eyed Authority Helbram - Velocidad - SSR - Hada.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-gen="female">
+            <img src="/7ds Personajes/Jenna - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="catas"
+            data-gen="female">
+            <img src="/7ds Personajes/Camila - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green">
+            <img src="/7ds Personajes/Herbalist Nasiens - HP - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Shion - HP - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="LR" data-race="unknown" data-attribute="red" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Milim Nava - Fuerza - LR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="light" data-char="jinetes"
+            data-gen="male">
+            <img src="/7ds Personajes/Little Hero Percival - Luz - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="rag god"
+            data-gen="male">
+            <img src="/7ds Personajes/Baldr - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Glass - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="blue" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Fitoria - Velocidad - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Ghislaine - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Roxy Migurdia - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Rudeus - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Data Zahard - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Ha Yuri Zahard - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Eren - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Filo - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Naofumi - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="red" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Reinhard - Fuerza - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Echidna - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="unknown" data-attribute="green" data-char="collab"
+            data-gen="female">
+            <img src="/7ds Personajes/Shuna - PS - SSR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="LR" data-race="unknown" data-attribute="green" data-char="collab">
+            <img src="/7ds Personajes/Demon Lord Rimuru - PS - LR - Desconocido.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="green" data-char="collab"
+            data-gen="male">
+            <img src="/7ds Personajes/Iori Yagami - PS - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Gilthunder - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SR" data-race="human" data-attribute="blue" data-gen="male">
+            <img src="/7ds Personajes/Waillo - Velocidad - SR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+        <button class="character-card" data-grade="SSR" data-race="human" data-attribute="blue" data-gen="female">
+            <img src="/7ds Personajes/Zaneri - Velocidad - SSR - Humano.png" alt="Personaje 1">
+            <div class="ban-button">BANEAR</div>
+            <div class="desban-button">DESBAN</div>
+        </button>
+    </div>
+    <div class="caracteristicas">
+        <button class="botonChar" data-char="catas"><img src="/Characteristic/Las 7 Catástrofes.png" alt=""></button>
+        <button class="botonChar" data-char="comn"><img src="/Characteristic/Los 10 Mandamientos.png" alt=""></button>
+        <button class="botonChar" data-char="collab"><img src="/Characteristic/Colaboraciones.png" alt=""></button>
+        <button class="botonChar" data-char="rag"><img src="/Characteristic/Ragnarok.png" alt=""></button>
+        <button class="botonChar" data-char="arcang"><img src="/Characteristic/Los 4 Arcángeles.png" alt=""></button>
+        <button class="botonChar" data-char="sins"><img src="/Characteristic/Los 7 Pecados Capitales.png" alt=""></button>
+        <button class="botonChar" data-char="god"><img src="/Characteristic/Dioses.png" alt=""></button>
+        <button class="botonChar" data-char="jinetes"><img src="/Characteristic/Los 4 Jinetes del Apocalipsis.png" alt=""></button>
+    </div>
+    <div class="teams-container">
+        <div class="team-section">
+            <button class="select-team-button" id="select-team-btn"><img src="/botones/9.png" alt="Seleccionar Equipo"></button>
+            <div class="characters-container second" id="team-container">
+                <div class="character-card">
+                    <img src="/src/slot.png" alt="Personaje 1" class="/src/slot-img">
+                    <button class="character-action-button"><img src="/botones/11.png" alt="S"></button>
+                </div>
+                <div class="character-card">
+                    <img src="/src/slot.png" alt="Personaje 2" class="/src/slot-img">
+                    <button class="character-action-button"><img src="/botones/11.png" alt="S"></button>
+                </div>
+                <div class="character-card">
+                    <img src="/src/slot.png" alt="Personaje 3" class="/src/slot-img">
+                    <button class="character-action-button"><img src="/botones/11.png" alt="S"></button>
+                </div>
+                <div class="character-card">
+                    <img src="/src/slot.png" alt="Personaje 4" class="/src/slot-img">
+                    <button class="character-action-button"><img src="/botones/11.png" alt="S"></button>
+                </div>
+            </div>
+        </div>
+        <div class="middle-image">
+            <img src="/src/versus.png" alt="Imagen Central">
+        </div>
+        <div class="team-section">
+            <button class="select-team-button" id="select-team-btn-2"><img src="/botones/10.png"
+                    alt="Seleccionar Equipo"></button>
+            <div class="characters-container second" id="team-container-2">
+                <div class="character-card">
+                    <img src="/src/slot.png" alt="Personaje 1" class="/src/slot-img2">
+                    <button class="character-action-button"><img src="/botones/11.png" alt="S"></button>
+                </div>
+                <div class="character-card">
+                    <img src="/src/slot.png" alt="Personaje 2" class="/src/slot-img2">
+                    <button class="character-action-button"><img src="/botones/11.png" alt="S"></button>
+                </div>
+                <div class="character-card">
+                    <img src="/src/slot.png" alt="Personaje 3" class="/src/slot-img2">
+                    <button class="character-action-button"><img src="/botones/11.png" alt="S"></button>
+                </div>
+                <div class="character-card">
+                    <img src="/src/slot.png" alt="Personaje 4" class="/src/slot-img2">
+                    <button class="character-action-button"><img src="/botones/11.png" alt="S"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<img src="cominsun.png" alt="comingsoon" class="coming-soon">-->
+    <div id="contenedorRuletas">
+        <div class="ruletaYBoton">
+            <canvas id="canvasRuleta1" width="400" height="400"></canvas>
+            <button id="btnRuleta1">Girar Ruleta 1</button>
+            <div id="resultadoRuleta1" class="resultadoTexto"></div>
+        </div>
+
+        <div class="ruletaYBoton">
+            <canvas id="canvasRuleta3" width="400" height="400"></canvas>
+            <button id="btnRuleta3">Girar Ruleta 3</button>
+            <div id="resultadoRuleta3" class="resultadoTexto"></div>
+        </div>
+
+        <div class="ruletaYBoton">
+            <canvas id="canvasRuleta2" width="400" height="400"></canvas>
+            <button id="btnRuleta2">Girar Ruleta 2</button>
+            <div id="resultadoRuleta2" class="resultadoTexto"></div>
+            <div id="formularioRuleta2">
+                <input type="text" id="inputNombreRuleta2" placeholder="Escribe un nombre" />
+                <button id="btnAgregarRuleta2">Agregar Nombre</button>
+            </div>
+        </div>
+
+        <div id="contenedorSections">
+            <div id="contenedorGanadores" class="drop-zone">
+                <h3>Ganadores</h3>
+            </div>
+            <div id="contenedorPerdedores" class="drop-zone">
+                <h3>Perdedores</h3>
+            </div>
+            <div id="contenedorAusentes" class="drop-zone">
+                <h3>Pochos</h3>
+            </div>
+        </div>
+    </div>
+    <img src="/src/TorneoRandomZ.png" alt="tourment" class="tourment-img">
+    <div class="container-tourment">
+        <div class="participant-info">
+            <div class="participant-card">
+                <img src="/src/participante2.png" alt="Participante">
+                <p class="participant-name" contenteditable="true">NOMBRE</p>
+            </div>
+        </div>
+        <div class="tourment-teams">
+            <div class="tourment-section">
+                <button class="tourment-buton" id="tourmentButon"><img src="/botones/9.png" alt="Seleccionar Equipo"></button>
+                <div class="characters-tourment" id="team-tourment">
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 1" class="/src/slot-img3">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 2" class="/src/slot-img3">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 3" class="/src/slot-img3">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 4" class="/src/slot-img3">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 1" class="/src/slot-img3">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 2" class="/src/slot-img3">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 3" class="/src/slot-img3">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 4" class="/src/slot-img3">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 1" class="/src/slot-img3">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 2" class="/src/slot-img3">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 3" class="/src/slot-img3">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 4" class="/src/slot-img3">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle-image">
+            <img src="/src/versus.png" alt="Imagen Central">
+        </div>
+        <div class="tourment-teams">
+            <div class="tourment-section">
+                <button class="tourment-buton" id="tourmentButon2"><img src="/botones/10.png" alt="Seleccionar Equipo"></button>
+                <div class="characters-tourment" id="team-tourment2">
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 1" class="/src/slot-img4">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 2" class="/src/slot-img4">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 3" class="/src/slot-img4">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 4" class="/src/slot-img4">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 1" class="/src/slot-img4">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 2" class="/src/slot-img4">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 3" class="/src/slot-img4">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 4" class="/src/slot-img4">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 1" class="/src/slot-img4">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 2" class="/src/slot-img4">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 3" class="/src/slot-img4">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                    <div class="character-card-tourment">
+                        <img src="/src/slot.png" alt="Personaje 4" class="/src/slot-img4">
+                        <button class="block-action-button"></button>
+                        <button class="tourment-action-button"><img src="/botones/11.png" alt="S"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="participant-info2">
+            <div class="participant-card2">
+                <img src="/src/participante1.png" alt="Participante">
+                <p class="participant-name" contenteditable="true">NOMBRE</p>
+            </div>
+        </div>
+    </div>
+    <script src="/js/script2.js"></script>
+</body>
+
+</html>

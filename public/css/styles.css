@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+/*============================================================*/
+/*======================= VARIANLES ==========================*/
+:root {
+    --color-texto: rgb(0, 0, 0);
+    --color-texto-menu: rgba(255, 255, 255);
+    --color-boton: rgb(134, 19, 119);
+    --color-texto-boton: rgb(255, 255, 255);
+    --color-menu-hover: rgb(0, 0, 0);
+    --color-menu-hover-texto: rgb(255, 255, 255);
+    --color-linea: rgb(219, 215, 215);
+}
+/*============================================================*/
+/*======================== GENERAL ===========================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bangers', sans-serif;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Asegura que el video esté detrás del contenido */
+}
+
+body {
+
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+}
+/*============================================================*/
+/*====================== LATERAL BAR =========================*/
+.barra-lateral {
+    width: 250px;
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 15px;
+    background: white;
+    transition: width 0.5s ease;
+}
+
+.mini-barra-lateral {
+    width: 80px;
+}
+
+.barra-lateral span {
+    width: 100px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.5s ease, width 0.5s ease;
+}
+
+.barra-lateral span.oculto {
+    opacity: 0;
+    width: 0;
+}
+
+.barra-lateral .nombre-pagina {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.barra-lateral .nombre-pagina img {
+    min-width: 50px;
+    font-size: 40px;
+}
+
+.barra-lateral .nombre-pagina span {
+    margin-left: 5px;
+    font-size: 35px;
+}
+/*============================================================*/
+/*=================== BOTÓN COMUNIDAD ========================*/
+.barra-lateral .boton {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(168, 18, 136);
+    color: var(--color-texto-boton);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición para el botón */
+}
+
+/* Animación al pasar el cursor sobre el botón */
+.barra-lateral .boton:hover {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    background-color: var(--color-menu-hover); /* Cambia el color de fondo */
+    color: var(--color-menu-hover-texto); /* Cambia el color del texto */
+}
+
+/* Animación cuando el botón está activo */
+.barra-lateral .boton:active {
+    transform: translateY(2px); /* Movimiento hacia abajo */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
+    transition: transform 0.1s ease, background-color 0.1s ease; /* Más rápido */
+}
+
+/* Animación cuando el botón está enfocado */
+.barra-lateral .boton:focus {
+    transform: scale(1.05); /* Ligeramente más grande */
+    outline: 2px solid var(--color-menu-hover-texto); /* Agrega un contorno */
+    transition: transform 0.2s ease, outline 0.2s ease;
+}
+
+/* Opcional: Estilo para el span dentro del botón (puedes mantenerlo si deseas animaciones separadas) */
+.barra-lateral .boton span {
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.barra-lateral .boton ion-icon {
+    min-width: 50px;
+    font-size: 25px;
+}
+/*============================================================*/
+/*=============== BOTONES DE NAVEGACIÓN ======================*/
+.barra-lateral .navegacion li {
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;
+    margin-top: 50px;
+}
+
+.barra-lateral .navegacion a {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background: white;
+    color: var(--color-texto);
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Suave cambio */
+}
+
+.barra-lateral .navegacion a:hover {
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+    transform: scale(1.05); /* Agranda ligeramente el botón */
+}
+
+.barra-lateral .navegacion a:active {
+    transform: scale(0.95); /* Simula ser presionado */
+    background-color: rgba(0, 0, 0, 0.8); /* Cambia a un color más oscuro */
+    transition: background-color 0.1s ease, transform 0.1s ease; /* Más rápido */
+}
+
+.barra-lateral .navegacion a:focus {
+    outline: 2px solid var(--color-menu-hover-texto);
+    transform: scale(1.02); /* Ligeramente más grande */
+    transition: outline 0.2s ease, transform 0.2s ease;
+}
+
+.barra-lateral .navegacion ion-icon {
+    min-width: 50px;
+    font-size: 30px;
+
+}
+/*============================================================*/
+/*========================= LÍNEA ============================*/
+.barra-lateral .linea {
+    width: 100%;
+    height: 4px;
+    margin-top: 70px;
+    background-color: var(--color-linea);
+}
+/*============================================================*/
+/*======================= PASSWORD ===========================*/
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-buttons #confirmButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.modal-buttons #cancelButton {
+    background-color: #f44336;
+    color: white;
+}
+
+.modal-buttons button:hover {
+    opacity: 0.9;
+}
+/*============================================================*/
+/*==================== REDES SOCIALES ========================*/
+.barra-lateral .botonRedes {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 220px;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: var(--color-texto-boton);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición para el botón */
+}
+
+/* Animación al pasar el cursor sobre el botón */
+.barra-lateral .botonRedes:hover {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    background-color: var(--color-menu-hover); /* Cambia el color de fondo */
+    color: var(--color-menu-hover-texto); /* Cambia el color del texto */
+}
+
+/* Animación cuando el botón está activo */
+.barra-lateral .botonRedes:active {
+    transform: translateY(2px); /* Movimiento hacia abajo */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
+    transition: transform 0.1s ease, background-color 0.1s ease; /* Más rápido */
+}
+
+/* Animación cuando el botón está enfocado */
+.barra-lateral .botonRedes:focus {
+    transform: scale(1.05); /* Ligeramente más grande */
+    outline: 2px solid var(--color-menu-hover-texto); /* Agrega un contorno */
+    transition: transform 0.2s ease, outline 0.2s ease;
+}
+
+/* Opcional: Estilo para el span dentro del botón (puedes mantenerlo si deseas animaciones separadas) */
+.barra-lateral .botonRedes span {
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.barra-lateral .botonRedes ion-icon {
+    min-width: 50px;
+    font-size: 25px;
+}
+/*-----------------------------------------------------------*/
+.barra-lateral .botonRedestu {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: var(--color-texto-boton);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición para el botón */
+}
+
+/* Animación al pasar el cursor sobre el botón */
+.barra-lateral .botonRedestu:hover {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    background-color: var(--color-menu-hover); /* Cambia el color de fondo */
+    color: var(--color-menu-hover-texto); /* Cambia el color del texto */
+}
+
+/* Animación cuando el botón está activo */
+.barra-lateral .botonRedestu:active {
+    transform: translateY(2px); /* Movimiento hacia abajo */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
+    transition: transform 0.1s ease, background-color 0.1s ease; /* Más rápido */
+}
+
+/* Animación cuando el botón está enfocado */
+.barra-lateral .botonRedestu:focus {
+    transform: scale(1.05); /* Ligeramente más grande */
+    outline: 2px solid var(--color-menu-hover-texto); /* Agrega un contorno */
+    transition: transform 0.2s ease, outline 0.2s ease;
+}
+
+/* Opcional: Estilo para el span dentro del botón (puedes mantenerlo si deseas animaciones separadas) */
+.barra-lateral .botonRedestu span {
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.barra-lateral .botonRedestu ion-icon {
+    min-width: 50px;
+    font-size: 25px;
+}
+/*-----------------------------------------------------------*/
+.barra-lateral .botonRedestri {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(49, 16, 197);
+    color: var(--color-texto-boton);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición para el botón */
+}
+
+/* Animación al pasar el cursor sobre el botón */
+.barra-lateral .botonRedestri:hover {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    background-color: var(--color-menu-hover); /* Cambia el color de fondo */
+    color: var(--color-menu-hover-texto); /* Cambia el color del texto */
+}
+
+/* Animación cuando el botón está activo */
+.barra-lateral .botonRedestri:active {
+    transform: translateY(2px); /* Movimiento hacia abajo */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
+    transition: transform 0.1s ease, background-color 0.1s ease; /* Más rápido */
+}
+
+/* Animación cuando el botón está enfocado */
+.barra-lateral .botonRedestri:focus {
+    transform: scale(1.05); /* Ligeramente más grande */
+    outline: 2px solid var(--color-menu-hover-texto); /* Agrega un contorno */
+    transition: transform 0.2s ease, outline 0.2s ease;
+}
+
+/* Opcional: Estilo para el span dentro del botón (puedes mantenerlo si deseas animaciones separadas) */
+.barra-lateral .botonRedestri span {
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.barra-lateral .botonRedestri ion-icon {
+    min-width: 50px;
+    font-size: 25px;
+}
