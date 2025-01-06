@@ -146,7 +146,7 @@ body {
 
 /* Estado del botón "presionado" mantenido */
 .combinacion1.active img {
-    content: url('8.png');
+    content: url('/botones/8.png');
     /* Aquí la imagen de botón presionado */
     transform: scale(0.95);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
