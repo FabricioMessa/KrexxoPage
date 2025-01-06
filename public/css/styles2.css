@@ -434,7 +434,7 @@ body {
 }
 
 .character-action-button:active img {
-    content: url('12.png');
+    content: url('/botones/12.png');
     /* Cambia la imagen al presionar */
     transform: scale(0.95);
     /* Reduce ligeramente el tamaño */
@@ -636,7 +636,7 @@ button.active {
 }
 
 .reset-filters:active img {
-    content: url('6.png');
+    content: url('/botones/6.png');
     /* Cambia la imagen al presionar */
     transform: scale(0.95);
     /* Reduce ligeramente el tamaño */
@@ -828,7 +828,7 @@ canvas {
 /*======================= EQUIPOS TORNEO =======================*/
 @font-face {
     font-family: 'Bangers';
-    src: url('fonts/Bangers.ttf') format('truetype');
+    src: url('/fonts/Bangers.ttf') format('truetype');
 }
 
 .container-tourment {
@@ -1047,7 +1047,7 @@ canvas {
     /* Ajusta el tamaño del botón */
     height: 80px;
     /* Ajusta el tamaño del botón */
-    background: url('block-icon.png') no-repeat center center;
+    background: url('/botones/block-icon.png') no-repeat center center;
     /* Usa la imagen como fondo */
     background-size: contain;
     /* Asegura que la imagen se ajuste al tamaño del botón */
@@ -1167,7 +1167,7 @@ canvas {
 }
 
 .combinacion2.active img {
-    content: url('15.png');
+    content: url('/botones/15.png');
     /* Aquí la imagen de botón presionado */
     transform: scale(0.95);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
@@ -1323,7 +1323,7 @@ canvas {
 
 /* Estado "presionado" (cuando el usuario hace clic y se queda así) */
 .tourment-action-button:active img {
-    content: url('12.png');
+    content: url('/botones/12.png');
     /* Ruta de la imagen "presionada" */
     transform: scale(0.95);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
