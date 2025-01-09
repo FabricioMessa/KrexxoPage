@@ -1,0 +1,628 @@
+/*===========================================================*/
+/*======================= PÁGINA ============================*/
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+body {
+    font-family: 'Bangers', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(217deg, rgba(246, 147, 255, 0.8), rgba(245, 243, 243, 0) 70.71%),
+            linear-gradient(127deg, rgba(63, 85, 211, 0.8), rgba(244, 247, 244, 0) 70.71%),
+            linear-gradient(336deg, rgba(164, 237, 250, 0.8), rgba(253, 253, 253, 0) 70.71%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/*===========================================================*/
+/*======================= TÍTULO ============================*/
+.container {
+    perspective: 1000px;
+}
+
+.rectangle-container {
+    position: relative;
+    margin: 10px;
+}
+
+.background-rectangle {
+    position: absolute;
+    width: 1000px;
+    height: 100px;
+    background-color: rgb(205, 28, 240);
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+}
+
+.foreground-rectangle {
+    position: relative;
+    width: 1000px;
+    height: 100px;
+    background-color: rgb(77, 154, 255);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foreground-rectangle p {
+    margin: 0;
+    color: white;
+    font-size: 55px;
+    text-align: center;
+    text-shadow: -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black, 3px 3px 0px black;
+}
+/*===========================================================*/
+/*=================== IMAGE AND EQUIPMENT ===================*/
+.content {
+    display: inline-block;
+    width: 70%;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    margin-left: 100px;
+}
+
+.shadowed-image {
+    max-width: 95%;
+    height: auto;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+    border-radius: 0;
+    position: relative;
+    top: -25px;
+    pointer-events: none;
+    transition: transform 0.1s ease-out; 
+}
+
+.image-container {
+    width: 400px; 
+    height: 400px;
+    position: relative;
+    perspective: 1000px; 
+    margin: auto;
+}
+
+.image-container .front,
+.image-container .back {
+    position: absolute;
+    width: 190%;
+    height: auto;
+    backface-visibility: hidden; 
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    left: -150px;
+    cursor: pointer;
+}
+
+.image-container .front {
+    transform: rotateY(0deg);
+}
+
+.image-container .back {
+    background-color: none;
+    width: 700px;
+    height: 300px;
+    padding: 20px;
+    transform: rotateY(180deg);
+    position: absolute;
+    left: -110px;
+    top: 80px;
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+}
+
+.mini-images,
+.mini-images2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 300px; 
+}
+
+.mini-images img,
+.mini-images2 img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.image-container.clicked .front {
+    transform: rotateY(-180deg);
+}
+
+.image-container.clicked .back {
+    transform: rotateY(0deg);
+}
+/*===========================================================*/
+/*=================== RIGHT ICONS ===========================*/
+.circle-icon {
+    position: absolute;
+    top: 40px;
+    left: 1300px;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+
+.dimon-icon {
+    position: absolute;
+    top: 40px;
+    left: 1400px;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+
+}
+
+.god-icon {
+    position: absolute;
+    top: 40px;
+    left: 1500px;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+
+.circle-icon, .dimon-icon, .god-icon {
+    display: inline-block;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    border: 4px solid rgba(255, 255, 255, 0.815); 
+    box-shadow: 0 0 10px rgba(175, 10, 240, 0.8), 0 0 20px rgba(12, 28, 167, 0.6); 
+    transition: all 0.3s ease; 
+    background: linear-gradient(145deg, #5771e6, #e839ff); 
+}
+
+.circle-icon:hover, .dimon-icon:hover, .god-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.9), 0 0 30px rgba(40, 54, 248, 0.7);
+    border-color: rgba(145, 14, 231, 0.8); 
+    filter: brightness(1.1); 
+}
+/*===========================================================*/
+/*===================== SKILLS ==============================*/
+.cards {
+    position: absolute;
+    top: 200px;
+    left: 1040px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 270px;
+    perspective: 1000px;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: perspective(1000px) rotateX(25deg) translateZ(-50px);
+}
+
+.wrapper {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.cover-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card:hover .wrapper {
+    transform: translateZ(-100px);
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+    border-radius: 10px;
+}
+
+.wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.61);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.card:hover .wrapper::before {
+    opacity: 1;
+}
+
+
+.wrapper::after {
+    bottom: 0;
+    opacity: 0;
+    background-image: linear-gradient(to bottom, transparent 100%, transparent 100%);
+    transition: all 0.5s;
+}
+
+.card:hover .wrapper::before {
+    opacity: 1;
+}
+
+.card:hover .wrapper::after {
+    background-image: linear-gradient(to bottom, rgba(227, 227, 231, 0.274) 68%, rgb(227, 227, 228) 97%);
+    opacity: 1;
+    height: 120px;
+}
+/*----------------------- SKILL 1 -----------------------------------*/
+.tittle {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    width: calc(100% - 20px);
+    font-size: 27px;
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.card:hover .tittle {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+/*----------------------- SKILL 2 -----------------------------------*/
+.tittle2 {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    width: calc(100% - 20px);
+    font-size: 28px;
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.card:hover .tittle2 {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+/*-------------------------- ULTI -----------------------------------*/
+.tittle3 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    width: calc(100% - 20px);
+    font-size: 19px;
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.card:hover .tittle3 {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+/*===========================================================*/
+/*===================== PASIVE ==============================*/
+.square-container {
+    position: absolute;
+    top: 600px;
+    left: 1030px;
+    width: 800px;
+    height: 10px;
+}
+
+.background-square {
+    position: absolute;
+    width: 800px;
+    height: 350px;
+    background-color: rgb(132, 9, 163);
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+}
+
+.foreground-square {
+    position: relative;
+    width: 800px;
+    height: 350px;
+    background-color: rgb(70, 166, 255);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foreground-square p {
+    margin: 10px;
+    color: white;
+    font-size: 39px;
+    text-align: center;
+    font-family: 'Bangers', sans-serif;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+/*===========================================================*/
+/*===================== TALENT ==============================*/
+.square-container2 {
+    position: absolute;
+    top: 758px;
+    left: 120px;
+    width: 200px;
+    height: 10px;
+}
+
+.background-square2 {
+    position: absolute;
+    width: 800px;
+    height: 201px;
+    background-color: rgb(132, 9, 163);
+    top: -11px;
+    left: -18px;
+    z-index: 1;
+}
+
+.foreground-square2 {
+    position: relative;
+    width: 766px;
+    height: 175px;
+    background-color: rgb(70, 166, 255);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.foreground-square2 p {
+    margin: 90px;
+    color: white;
+    font-size: 27px;
+    text-align: center;
+    font-family: 'Bangers', sans-serif;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+    left: 90px;
+    position: absolute;
+}
+
+.foreground-square2 img {
+    width: 150px;
+    height: auto;
+    left: 30px;
+    position: absolute;
+}
+/*===========================================================*/
+/*===================== TOOL TIPS ===========================*/
+/*----------------------- SKILL 1 -----------------------------------*/
+.tooltip_1 {
+    color: rgb(255, 251, 0);
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip_1::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    width: 140px;
+    height: 20px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 84px;
+    top: 30px;
+    z-index: 1;
+}
+
+.tooltip_1:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+/*----------------------- SKILL 2 -----------------------------------*/
+.tooltip_2 {
+    color: rgb(255, 251, 0);
+    /* Cambia el color de la palabra */
+    position: relative;
+    /* Para posicionar el tooltip */
+    cursor: pointer;
+    /* Indica que es interactivo */
+}
+
+.tooltip_2::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    width: 230px;
+    height: 130px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 110px;
+    top: 50px;
+}
+
+.tooltip_2:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+/*----------------------- SKILL 3 -----------------------------------*/
+.tooltip_3 {
+    color: rgb(255, 251, 0);
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip_3::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 110px;
+    top: 20px;
+    z-index: 1;
+}
+
+.tooltip_3:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+/*----------------------- PASIVE -----------------------------------*/
+.tooltip_4 {
+    color: rgb(255, 251, 0);
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip_4::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 27px;
+    width: 250px;
+    height: 260px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 80px;
+}
+
+.tooltip_4:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+/*------------ RELIQUIA/TALENTO/MANDAMIENTO ------------------------*/
+.tooltip_5 {
+    color: rgb(255, 251, 0);
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip_5::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 80px;
+}
+
+.tooltip_5:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+/*----------------- EQUIPAMIENTOS ------------------------*/
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-container:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip-container::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 20%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}

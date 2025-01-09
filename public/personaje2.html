@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meliodas&Elizabeth</title>
+    <link rel="stylesheet" href="/css/personajeDos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="rectangle-container">
+            <div class="background-rectangle"></div>
+            <div class="foreground-rectangle">
+                <p>
+                    < Gracia del Destello > Ludociel, pacto de luz
+                </p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="image-container">
+                <div class="front">
+                    <img src="/renders/Elizabeth y Meliodas.png" alt="Meliodas y Elizabeth" class="shadowed-image">
+                </div>
+                <div class="back">
+                    <div class="mini-images">
+                        <span class="tooltip-container" data-tooltip="Ataque - 15%">
+                            <img src="/equipment/vida1.png" alt="Mini 1">
+                        </span>
+                        <span class="tooltip-container" data-tooltip="Ataque - 15%">
+                            <img src="/equipment/vida2.png" alt="Mini 2">
+                        </span>
+                        <span class="tooltip-container" data-tooltip="Defensa - 15%">
+                            <img src="/equipment/defcentro1.png" alt="Mini 2">
+                        </span>
+                        <span class="tooltip-container" data-tooltip="Defensa - 15%">
+                            <img src="/equipment/defcentro2.png" alt="Mini 2">
+                        </span>
+                        <span class="tooltip-container" data-tooltip="Vida - 15%">
+                            <img src="/equipment/vida3.png" alt="Mini 2">
+                        </span>
+                        <span class="tooltip-container" data-tooltip="Vida - 15%">
+                            <img src="/equipment/vida4.png" alt="Mini 2">
+                        </span>
+                    </div>
+                    <div class="mini-images2">
+                        <span class="tooltip-container" data-tooltip="Ataque - 15%">
+                            <img src="/equipment/atk1.png" alt="Mini 1">
+                        </span>
+                        <span class="tooltip-container" data-tooltip="Ataque - 15%">
+                            <img src="/equipment/atk2.png" alt="Mini 2">
+                        </span>
+                        <span class="tooltip-container" data-tooltip="Defensa - 15%">
+                            <img src="/equipment/defcentro1.png" alt="Mini 2">
+                        </span>
+                        <span class="tooltip-container" data-tooltip="Defensa - 15%">
+                            <img src="/equipment/defcentro2.png" alt="Mini 2">
+                        </span>
+                        <span class="tooltip-container" data-tooltip="Vida - 15%">
+                            <img src="/equipment/atk3.png" alt="Mini 2">
+                        </span>
+                        <span class="tooltip-container" data-tooltip="Vida - 15%">
+                            <img src="/equipment/atk4.png" alt="Mini 2">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="/Atributos/attribute_light.png" alt="Círculo Amarillo" class="circle-icon">
+    <img src="/Race/race_demon.png" alt="Círculo Amarillo" class="dimon-icon">
+    <img src="/Race/race_goddess.png" alt="Círculo Amarillo" class="god-icon">
+    <div class="cards">
+        <div class="card">
+            <div class="wrapper">
+                <img src="/Skills/Elizabeth y Meliodas - s1.png" alt="Sigurd" class="cover-image">
+            </div>
+            <div class="tittle">
+                Inflige un daño de <span class="tooltip_1" data-tooltip="Ignora la defensa.">carga</span> equivalente a un 358% del ataque sobre todos los enemigos y reduce un 50% su resistencia crítica durante 2 turnos.
+            </div> 
+        </div>
+        <div class="card">
+            <div class="wrapper">
+                <img src="/Skills/Elizabeth y Meliodas - s2.png" alt="Sigurd" class="cover-image">
+            </div>
+            <div class="tittle2">
+                Elimina las desventajas de todos los aliados. Aumenta un 30% el daño inflingido a los enemigos y reduce un 20% el daño recibido durante 2 turnos.<span class="tooltip_2" data-tooltip="Aumento...">
+            </div>
+        </div>
+        <div class="card">
+            <div class="wrapper">
+                <img src="/Skills/Elizabeth y Meliodas - Ulti.png" alt="Sigurd" class="cover-image">
+            </div>
+            <div class="tittle3">
+                Aumenta un 50% el daño que reciben todos los enemigos durante 2 turnos y, a continuación, inflinge un daño de <span class="tooltip_3" data-tooltip="Aumento de la probabilidad crítica x3.">sesgada</span> equivalente al 945% del ataque sobre un enemigo. 
+                Bloquea los efectos de habilidades de todos los enemigos (incluidos las ultimates) y reduce un 30% el daño inflingido con ultimates durante 2 turnos (Excluye habilidades de postura y recuperación).  
+            </div> <!-- Aquí está el texto -->
+        </div>
+    </div>
+    <div class="square-container">
+        <div class="background-square"></div>
+        <div class="foreground-square">
+            <p>
+                Aumenta un 8% las estadísticas básicas de los aliados raza diosa cada vez que un aliado utiliza una postura o una habilidad de ventaja, hasta un 40%. Además, aumenta un 4% la probabilidad y daño crítico de los aliados raza diosa por cada desventaja eliminada cuando el héroe use una habilidad (Limitado a 5 veces). <span class="tooltip_4" data-tooltip="Estadísticas..."></span>
+            </p>
+        </div>
+    </div>
+    <div class="square-container2">
+        <div class="background-square2"></div>
+        <div class="foreground-square2">
+            <img src="/Skills/TalentoMeliza.png" alt="">
+            <p>
+                Aumenta un 8% el ataque del héroe durante cada postura o ventaja sobre el enemigo al utilizar una habilidadd (Se aplica antes de la activación de habilidades). <span class="tooltip_5" data-tooltip="Daño..."></span>
+            </p>
+        </div>
+    </div>
+    <script>
+        const contents = document.querySelectorAll('.content');
+
+        contents.forEach(content => {
+            content.addEventListener('mousemove', (e) => {
+                const rect = content.getBoundingClientRect(); // Dimensiones del contenedor
+                const x = e.clientX - rect.left; // Posición X relativa al contenedor
+                const y = e.clientY - rect.top; // Posición Y relativa al contenedor
+
+                // Calcular rotación en función de la posición del cursor
+                const rotateX = ((y / rect.height) - 0.5) * -20; // Ajusta la inclinación
+                const rotateY = ((x / rect.width) - 0.5) * 20;
+
+                // Aplicar transformación 3D
+                content.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            content.addEventListener('mouseleave', () => {
+                // Restaurar el contenedor cuando el cursor salga
+                content.style.transform = `rotateX(0) rotateY(0)`;
+            });
+        });
+        // Código nuevo: Efecto de clic para girar la imagen
+        const imageContainer = document.querySelector('.image-container');
+        if (imageContainer) {
+            imageContainer.addEventListener('click', function () {
+                this.classList.toggle('clicked');
+            });
+        }
+    </script>
+</body>
+</html>
