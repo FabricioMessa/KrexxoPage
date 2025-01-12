@@ -2,152 +2,822 @@
 
 body {
     font-family: 'Bangers', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(217deg, rgba(255, 255, 255, 0.8), rgba(245, 243, 243, 0) 70.71%),
-            linear-gradient(127deg, rgba(211, 63, 154, 0.8), rgba(244, 247, 244, 0) 70.71%),
-            linear-gradient(336deg, rgba(252, 3, 239, 0.8), rgba(253, 253, 253, 0) 70.71%);
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100vh;
-    flex-direction: column;
-    /* Organiza en columna */
-}
-
-.container {
-    perspective: 1000px;
-    /* Proporciona profundidad 3D */
-}
-
-.rectangle-container {
-    position: relative;
-    margin: 10px;
-}
-
-.background-rectangle {
-    position: absolute;
-    width: 1000px;
-    height: 100px;
-    background-color: rgb(163, 9, 104);
-    top: 15px;
-    left: 15px;
-    z-index: 1;
-}
-
-.foreground-rectangle {
-    position: relative;
-    width: 1000px;
-    height: 100px;
-    background-color: rgb(214, 12, 153);
-    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.foreground-rectangle p {
     margin: 0;
-    color: white;
-    font-size: 55px;
-    text-align: center;
-    text-shadow: -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black, 3px 3px 0px black;
-    /* Sombras */
+    background-color: #101720;
 }
 
-.content {
-    display: inline-block;
-    width: 70%;
-    /* Asegura que ocupe todo el ancho */
-    justify-content: space-between;
-    /* Separa el contenido a los lados */
-    padding: 20px;
-    box-sizing: border-box;
-    /* Incluye el padding en el ancho */
-    transform-style: preserve-3d;
-    /* Habilita transformaciones 3D para hijos */
-    transition: transform 0.1s ease-out;
-    /* Suaviza el movimiento */
-    margin-left: 100px;
-}
-
-.shadowed-image {
-    max-width: 95%;
-    /* Ajusta el tamaño máximo de la imagen */
-    height: auto;
-    /* Mantiene las proporciones */
-    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
-    /* Aplica sombra al contorno */
-    border-radius: 0;
-    /* Asegura que no haya esquinas redondeadas */
+.file {
+    width: 100%;    
+    height: 1950px;
     position: relative;
-    top: -25px;
-    pointer-events: none;
-    transition: transform 0.1s ease-out; /* Suaviza la transformación de la imagen */
+    margin: 20px;
 }
 
-.image-container {
-    width: 400px; /* Ajusta según tus necesidades */
-    height: 400px;
-    position: relative;
-    perspective: 1000px; /* Proporciona profundidad 3D */
-    margin: auto;
-}
-
-.image-container .front,
-.image-container .back {
+.tabs {
+    display: flex;
     position: absolute;
-    width: 190%;
+    width: 100%;
+}
+
+.tab-active {
+    background-color: rgb(18, 17, 100); 
+    padding: 10px 50px;
+    border-bottom: none;
+    border-radius: 20px 20px 0px 0px;
+    cursor: pointer;
+    color: white; 
+    font-size: 20px;
+}
+
+/* Pestaña inactiva */
+.tab {
+    background-color: rgb(33, 33, 102); 
+    padding: 10px 50px;
+    border-bottom: none;
+    border-radius: 20px 20px 0px 0px;
+    cursor: pointer;
+    color: white; 
+    font-size: 20px;
+}
+
+/* Hoja activa */
+.sheet-active {
+    background-color: rgb(18, 17, 100); 
+    margin: 30px 0px 0px 0px;
+    width: 100%;
+    height: calc(100% - 30px);
+    position: absolute;
+    top: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 0px 20px 20px 0px;
+    z-index: 1;
+    color: white;
+    display: flex;
+}
+
+.sheet {
+    background-color: rgb(18, 17, 100); 
+    margin: 30px 0px 0px 0px;
+    width: 100%;
+    height: calc(100% - 30px);
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 0px 20px 20px 0px;
+    color: white; 
+}
+
+.box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: repeating-conic-gradient(from var(--a), #fabfff 0%, #eb5de4 5%, transparent 5%, transparent 40%, #f1a2e4 50%);
+    animation: animate 4s linear infinite;
+    border-radius: 20px;
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes animate {
+    0% {
+        --a: 0deg;
+    }
+    100% {
+        --a: 360deg;
+    }
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a), #e86fec 0%, #9d2c97 5%, transparent 5%, transparent 40%, #d37fcf 50%);
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 15px;
+    border: 8px solid rgb(18, 17, 100);
+}
+
+.box img {
+    position: absolute;
+    width: 89%;
+    height: 92%;
+    left: 6px;
+    top: 8px;
+    border-radius: 10px;
+}
+
+.box2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: repeating-conic-gradient(from var(--a), #748fe7 0%, #08fdfd 5%, transparent 5%, transparent 40%, #6391e6 50%);
+    animation: animate 4s linear infinite;
+    border-radius: 20px;
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes animate {
+    0% {
+        --a: 0deg;
+    }
+    100% {
+        --a: 360deg;
+    }
+}
+
+.box2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a), #797ae4 0%, #582c9d 5%, transparent 5%, transparent 40%, #609bdf 50%);
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+}
+
+.box2::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 15px;
+    border: 8px solid rgb(18, 17, 100);
+}
+
+.box2 img {
+    position: absolute;
+    width: 85%;
+    height: 86%;
+    left: 12px;
+    top: 11px;
+    border-radius: 10px;
+}
+
+.tittle {
+    width: 700px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.tittle p {
+    font-size: 40px;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.contenedor-uno {
+    width: 855px;
+    height: 690px;
+    position: absolute;
+    left: 30px;
+    top: 200px;
+    display: grid;
+    align-items: center;
+}
+
+.pasiva {
+    display: flex;
+    align-items: center;
     height: auto;
-    backface-visibility: hidden; /* Oculta la cara trasera */
-    transform-style: preserve-3d;
-    transition: transform 0.8s ease;
-    left: -150px;
+}
+
+.pasiva img {
+    width: 150px;
+    height: 150px;
+}
+
+.text-pasiva {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    letter-spacing: 2px;
+}
+
+#titulo {
+    font-size: 40px;
+    margin: 0;
+    text-shadow: -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black, 3px 3px 0px black;
+}
+
+#descripcion {
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+    font-size: 25px;
+    padding: 0px 15px 0px;
+    text-shadow: -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black, 3px 3px 0px black;
+}
+
+.reliquia {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.reliquia img {
+    width: 150px;
+    height: 150px; 
+}
+
+.text-reliquia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+#titulo2 {
+    font-size: 40px;
+    margin: 0;
+    text-shadow: -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black, 3px 3px 0px black;
+}
+
+#descripcion2 {
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+    font-size: 30px;
+    padding: 0px 15px 0px;
+    text-shadow: -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black, 3px 3px 0px black;
+}
+
+.skill-1 {
+    width: 750px;
+    height: 280px;
+    position: absolute;
+    left: 1000px;
+    top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;  
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(7, 58, 87);
+    padding: 0px 5px 0px 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0,5px 10px #000;
+    justify-content: center;
+}
+
+.card .back p {
+    letter-spacing: auto;
+    font-size: 26px;
+    margin-top: 25px;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.skill-2 {
+    width: 750px;
+    height: 280px;
+    position: absolute;
+    left: 1000px;
+    top: 340px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skill-2 .card .back p {
+    letter-spacing: 1px;
+    font-size: 20px;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;    
+}
+
+.skill-3 {
+    width: 750px;
+    height: 280px;
+    position: absolute;
+    left: 1000px;
+    top: 650px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skill-3 .card .back p {
+    letter-spacing: 1px;
+    font-size: 19px;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;       
+}
+
+.color1 {
+    color: rgb(0, 238, 255);
+}
+
+.color2 {
+    color: rgb(255, 238, 0);
+}
+
+.color3 {
+    color: rgb(60, 255, 0);
+}
+
+.tooltip_1 {
+    color: rgb(0, 238, 255);
+    position: relative;
     cursor: pointer;
 }
 
-.image-container .front {
-    transform: rotateY(0deg);
-}
-
-.image-container .back {
-    background-color: none;
-    width: 700px;
-    height: 300px; /* Aumentado para dar más espacio */
-    padding: 20px;
-    transform: rotateY(180deg);
+.tooltip_1::after {
+    content: attr(data-tooltip);
     position: absolute;
-    left: -110px; /* Mantenemos el ajuste de posición */
-    top: 80px;
-    display: flex; /* Para colocar los divs uno al lado del otro */
-    justify-content: center; /* Centra horizontalmente */
-    gap: 30px; /* Espacio entre las dos grillas */
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    width: 350px;
+    height: 25px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 84px;
+    top: -15px;
+    z-index: 1;
 }
 
-.mini-images,
-.mini-images2 {
+.tooltip_1:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+/*---------------------------------------------------------------------------------*/
+.tooltip_2 {
+    color: rgb(0, 238, 255);
+    /* Cambia el color de la palabra */
+    position: relative;
+    /* Para posicionar el tooltip */
+    cursor: pointer;
+    /* Indica que es interactivo */
+}
+
+.tooltip_2::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    width: 430px;
+    height: 80px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 80px;
+    top: -70px;
+}
+
+.tooltip_2:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip_3 {
+    color: rgb(0, 238, 255);
+    /* Cambia el color de la palabra */
+    position: relative;
+    /* Para posicionar el tooltip */
+    cursor: pointer;
+    /* Indica que es interactivo */
+}
+
+.tooltip_3::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    width: 420px;
+    height: 65px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 80px;
+    top: -50px;
+}
+
+.tooltip_3:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip_4 {
+    color: rgb(0, 238, 255);
+    /* Cambia el color de la palabra */
+    position: relative;
+    /* Para posicionar el tooltip */
+    cursor: pointer;
+    /* Indica que es interactivo */
+}
+
+.tooltip_4::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    width: 420px;
+    height: 65px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 80px;
+    top: -50px;
+}
+
+.tooltip_4:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip_5 {
+    color: rgb(0, 238, 255);
+    /* Cambia el color de la palabra */
+    position: relative;
+    /* Para posicionar el tooltip */
+    cursor: pointer;
+    /* Indica que es interactivo */
+}
+
+.tooltip_5::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    width: 320px;
+    height: 105px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 80px;
+    top: -50px;
+}
+
+.tooltip_5:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip_6 {
+    color: rgb(0, 238, 255);
+    /* Cambia el color de la palabra */
+    position: relative;
+    /* Para posicionar el tooltip */
+    cursor: pointer;
+    /* Indica que es interactivo */
+}
+
+.tooltip_6::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    width: 420px;
+    height: 80px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 80px;
+    top: -50px;
+    z-index: 2; 
+}
+
+.tooltip_6:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip_7 {
+    color: rgb(0, 238, 255);
+    /* Cambia el color de la palabra */
+    position: relative;
+    /* Para posicionar el tooltip */
+    cursor: pointer;
+    /* Indica que es interactivo */
+}
+
+.tooltip_7::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    width: 170px;
+    height: 190px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 80px;
+    top: -50px;
+}
+
+.tooltip_7:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip_8 {
+    color: rgb(0, 238, 255);
+    /* Cambia el color de la palabra */
+    position: relative;
+    /* Para posicionar el tooltip */
+    cursor: pointer;
+    /* Indica que es interactivo */
+}
+
+.tooltip_8::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    width: 170px;
+    height: 175px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 50px;
+    top: -50px;
+}
+
+.tooltip_8:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip_9 {
+    color: rgb(0, 238, 255);
+    /* Cambia el color de la palabra */
+    position: relative;
+    /* Para posicionar el tooltip */
+    cursor: pointer;
+    /* Indica que es interactivo */
+}
+
+.tooltip_9::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    width: 180px;
+    height: 90px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 90px;
+    top: 10px;
+    z-index: 2;
+}
+
+.tooltip_9:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip_10 {
+    color: rgb(0, 238, 255);
+    /* Cambia el color de la palabra */
+    position: relative;
+    /* Para posicionar el tooltip */
+    cursor: pointer;
+    /* Indica que es interactivo */
+}
+
+.tooltip_10::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    width: 160px;
+    height: 80px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 90px;
+    top: 10px;
+    z-index: 2;
+}
+
+.tooltip_10:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip_11 {
+    color: rgb(0, 238, 255);
+    /* Cambia el color de la palabra */
+    position: relative;
+    /* Para posicionar el tooltip */
+    cursor: pointer;
+    /* Indica que es interactivo */
+}
+
+.tooltip_11::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    width: 320px;
+    height: 65px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    left: 80px;
+    top: -50px;
+}
+
+.tooltip_11:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+/*--------------------------------------------------------------------------*/
+.personaje {
+    position: absolute;
+    width: 885px;
+    height: 910px;
+    left: 910px;
+    top: 980px;
+    perspective: 1500px; /* Añade perspectiva para el efecto 3D */
+    border-radius: 30px;
+    background: radial-gradient(circle at center,
+    rgb(65, 64, 200) 0%,
+    rgb(45, 44, 170) 30%,
+    rgb(18, 17, 100) 100%);
+}
+
+.card-3d {
+    width: 800px;
+    height: auto;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease;
+    margin: 0 auto;
+}
+
+.card-3d img {
+    width: 100%;
+    height: auto;
+    backface-visibility: hidden;
+    margin-top: 50px;
+    filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.7));
+}
+
+.equipamientos {
+    background: linear-gradient(180deg, rgb(41, 40, 155) 0%, rgb(18, 17, 100) 100%);
+    position: absolute;
+    border-radius: 30px;
+    width: 830px;
+    height: 920px;
+    top: 970px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.titulo-equipamiento {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-equipamiento p {
+    font-size: 40px;
+    margin: 25px;
+}
+
+.images-equipment {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
-    width: 300px; /* Ancho fijo para cada grilla */
+    grid-template-columns: repeat(6, 1fr); /* Crea 6 columnas de igual tamaño */
+    gap: 30px; /* Espacio entre las imágenes */
+    padding: 25px; /* Espacio interno del contenedor */
 }
 
-.mini-images img,
-.mini-images2 img {
-    width: 120px;
-    height: 120px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    object-fit: cover;
-}
-
-.image-container.clicked .front {
-    transform: rotateY(-180deg);
-}
-
-.image-container.clicked .back {
-    transform: rotateY(0deg);
+.images-equipment img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
 }
 
 .tooltip-container {
@@ -162,9 +832,9 @@ body {
 }
 
 .tooltip-container::after {
-    content: attr(data-tooltip); /* Aquí está el problema - el atributo data-tooltip debe estar en el contenedor, no en la imagen */
+    content: attr(data-tooltip);
     position: absolute;
-    bottom: 20%; /* Ajustado para mejor posicionamiento */
+    bottom: 20%; 
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.9);
@@ -172,7 +842,6 @@ body {
     padding: 10px;
     font-size: 24px;
     width: 150px;
-    /* Establece un ancho fijo */
     height: 30px;
     text-align: center;
     opacity: 0;
@@ -182,997 +851,21 @@ body {
     z-index: 1000;
 }
 
-.circle-icon {
+a {
     position: absolute;
-    /* Posiciona la imagen independientemente */
-    top: 40px;
-    /* Ajusta para alinearlo verticalmente con el rectángulo */
-    left: 1300px;
-    /* Coloca la imagen a la derecha del rectángulo */
-    width: 50px;
-    /* Ajusta el tamaño del círculo */
-    height: 50px;
-    z-index: 2;
-    /* Asegura que esté visible encima */
-}
-
-.dimon-icon {
-    position: absolute;
-    /* Posiciona la imagen independientemente */
-    top: 40px;
-    /* Ajusta para alinearlo verticalmente con el rectángulo */
-    left: 1400px;
-    /* Coloca la imagen a la derecha del rectángulo */
-    width: 50px;
-    /* Ajusta el tamaño del círculo */
-    height: 50px;
-    z-index: 2;
-    /* Asegura que esté visible encima */
-}
-
-.god-icon {
-    position: absolute;
-    /* Posiciona la imagen independientemente */
-    top: 40px;
-    /* Ajusta para alinearlo verticalmente con el rectángulo */
-    left: 1500px;
-    /* Coloca la imagen a la derecha del rectángulo */
-    width: 50px;
-    /* Ajusta el tamaño del círculo */
-    height: 50px;
-    z-index: 2;
-    /* Asegura que esté visible encima */
-}
-
-/* Estilos para las imágenes con marcos modernos y bordes fosforescentes */
-
-.circle-icon, .dimon-icon, .god-icon {
-    display: inline-block;
-    width: 50px; /* Ajusta el tamaño de las imágenes según sea necesario */
-    height: 50px; /* Asegúrate de que las imágenes sean proporcionales */
-    border-radius: 50%; /* Hace que las imágenes tengan bordes redondeados */
-    border: 4px solid rgba(255, 255, 255, 0.815); /* Borde blanco semitransparente */
-    box-shadow: 0 0 10px rgba(255, 1, 242, 0.8), 0 0 20px rgba(167, 12, 154, 0.6); /* Efecto fosforescente */
-    transition: all 0.3s ease; /* Suaviza las transiciones */
-    background: linear-gradient(145deg, #f384ed, #ff39ee); /* Fondo moderno */
-}
-
-.circle-icon:hover, .dimon-icon:hover, .god-icon:hover {
-    transform: scale(1.1); /* Ampliación suave al pasar el cursor */
-    box-shadow: 0 0 20px rgba(255, 0, 128, 0.9), 0 0 30px rgba(248, 40, 196, 0.7); /* Cambio de color fosforescente al resaltar */
-    border-color: rgba(255, 0, 242, 0.8); /* Cambia el color del borde al resaltar */
-    filter: brightness(1.1); /* Hace que el contenido sea más brillante */
-}
-
-.cards {
-    position: absolute;
-    /* Permite posicionamiento relativo al contenedor principal */
-    top: 200px;
-    /* Ajusta según la altura de los elementos superiores */
-    left: 1040px;
-    /* Ajusta para alinearlo correctamente */
-    display: flex;
-    /* Activa el diseño de flexbox */
-    gap: 20px;
-    /* Espaciado entre las cartas */
-    flex-wrap: nowrap;
-    /* Asegura que las cartas no se envuelvan */
-    justify-content: flex-start;
-    /* Alinea las cartas a la izquierda */
-    align-items: center;
-    /* Alinea verticalmente las cartas en el centro */
-    width: auto;
-    /* Permite que el contenedor se ajuste al contenido */
-}
-
-.card {
-    position: relative;
-    width: 250px;
-    /* Ancho de la tarjeta */
-    height: 350px;
-    /* Altura de la tarjeta */
-    display: inline-block;
-    overflow: hidden;
-    max-width: 270px;
-    /* Ancho máximo del contenedor */
-    perspective: 1000px;
-    transition: transform 0.5s ease-in-out;
-    /* Suaviza la animación 3D */
-    cursor: pointer;
-    /* Cambia el cursor al pasar sobre la tarjeta */
-}
-
-.card:hover {
-    transform: perspective(1000px) rotateX(25deg) translateZ(-50px);
-    /* Mueve toda la tarjeta hacia atrás */
-}
-
-.wrapper {
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    /* Suaviza la animación */
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    /* Mantiene el fondo detrás */
-}
-
-.cover-image {
-    display: block;
-    /* Asegura que la imagen sea visible */
-    width: 100%;
-    /* Asegura que la imagen ocupe todo el ancho del contenedor */
-    height: 100%;
-    /* Asegura que la imagen ocupe toda la altura del contenedor */
-    object-fit: cover;
-    /* Mantiene las proporciones de la imagen */
+    top: 24px;
+    left: 1750px;
+    background-color: rgb(32, 21, 187);
     border-radius: 10px;
-    /* Opcional: bordes redondeados */
+    transition: background-color 0.5s;
 }
 
-.card:hover .wrapper {
-    transform: translateZ(-100px);
-    /* Mueve toda la imagen hacia atrás */
+a ion-icon {
+    color: black;
+    width: 50px;
+    height: 50px;
 }
 
-.wrapper::before,
-.wrapper::after {
-    content: "";
-    opacity: 0;
-    width: 100%;
-    height: 80px;
-    transition: all 0.5s;
-    position: absolute;
-    left: 0;
-    border-radius: 10px;
-}
-
-.wrapper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.61);
-    /* Blanco translúcido */
-    opacity: 0;
-    /* Inicialmente invisible */
-    transition: opacity 0.5s ease-in-out;
-    /* Transición suave */
-    z-index: 1;
-    /* Asegúrate de que esté encima de la imagen */
-}
-
-.card:hover .wrapper::before {
-    opacity: 1;
-    /* Haz visible la superposición */
-}
-
-
-.wrapper::after {
-    bottom: 0;
-    opacity: 0;
-    /* Oculta el efecto inicialmente */
-    background-image: linear-gradient(to bottom, transparent 100%, transparent 100%);
-    /* Inicialmente transparente */
-    transition: all 0.5s;
-    /* Agrega transición suave */
-}
-
-.card:hover .wrapper::before {
-    opacity: 1;
-    /* Hace visible el efecto */
-}
-
-.card:hover .wrapper::after {
-    background-image: linear-gradient(to bottom, rgba(227, 227, 231, 0.274) 68%, rgb(227, 227, 228) 97%);
-    /* Activa el color de fondo */
-    opacity: 1;
-    /* Hace visible el efecto */
-    height: 120px;
-    /* Cambia la altura al pasar el cursor */
-}
-
-.tittle {
-    position: absolute;
-    bottom: 50px;
-    /* Posición inicial del texto */
-    left: 50%;
-    /* Centra horizontalmente */
-    transform: translateX(-50%) translateY(100px);
-    /* Texto comienza fuera de la tarjeta */
-    width: calc(100% - 20px);
-    /* Hace que el texto use el ancho del contenedor menos márgenes */
-    font-size: 35px;
-    color: white;
-    padding: 10px;
-    /* Espaciado interno para las márgenes */
-    opacity: 0;
-    /* Oculta el texto inicialmente */
-    z-index: 2;
-    /* Asegura que el texto esté encima */
-    transition: all 0.5s ease-in-out;
-    text-align: center;
-    /* Centra el texto horizontalmente */
-    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
-}
-
-.card:hover .tittle {
-    transform: translateX(-50%) translateY(0);
-    /* Mueve el texto a su posición final */
-    opacity: 1;
-    /* Hace visible el texto */
-}
-
-.tittle2 {
-    position: absolute;
-    bottom: 50px;
-    /* Posición inicial del texto */
-    left: 50%;
-    /* Centra horizontalmente */
-    transform: translateX(-50%) translateY(100px);
-    /* Texto comienza fuera de la tarjeta */
-    width: calc(100% - 20px);
-    /* Hace que el texto use el ancho del contenedor menos márgenes */
-    font-size: 35px;
-    color: white;
-    padding: 10px;
-    /* Espaciado interno para las márgenes */
-    opacity: 0;
-    /* Oculta el texto inicialmente */
-    z-index: 2;
-    /* Asegura que el texto esté encima */
-    transition: all 0.5s ease-in-out;
-    text-align: center;
-    /* Centra el texto horizontalmente */
-    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
-}
-
-.card:hover .tittle2 {
-    transform: translateX(-50%) translateY(0);
-    /* Mueve el texto a su posición final */
-    opacity: 1;
-    /* Hace visible el texto */
-}
-
-.tittle3 {
-    position: absolute;
-    bottom: 50px;
-    /* Posición inicial del texto */
-    left: 50%;
-    /* Centra horizontalmente */
-    transform: translateX(-50%) translateY(100px);
-    /* Texto comienza fuera de la tarjeta */
-    width: calc(100% - 20px);
-    /* Hace que el texto use el ancho del contenedor menos márgenes */
-    font-size: 20px;
-    color: white;
-    padding: 10px;
-    /* Espaciado interno para las márgenes */
-    opacity: 0;
-    /* Oculta el texto inicialmente */
-    z-index: 2;
-    /* Asegura que el texto esté encima */
-    transition: all 0.5s ease-in-out;
-    text-align: center;
-    /* Centra el texto horizontalmente */
-    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
-}
-
-.card:hover .tittle3 {
-    transform: translateX(-50%) translateY(0);
-    /* Mueve el texto a su posición final */
-    opacity: 1;
-    /* Hace visible el texto */
-}
-
-.square-container {
-    position: absolute;
-    /* Posicionamiento personalizado */
-    top: 600px;
-    /* Ajusta según el diseño */
-    left: 1030px;
-    /* Ajusta según el diseño */
-    width: 800px;
-    /* Ancho del rectángulo */
-    height: 10px;
-    /* Altura del rectángulo */
-}
-
-.background-square {
-    position: absolute;
-    width: 800px;
-    /* Ancho del cuadrado */
-    height: 350px;
-    /* Altura igual al ancho */
-    background-color: rgb(163, 9, 104);
-    /* Color de fondo */
-    top: 15px;
-    /* Desfase para crear el efecto de capas */
-    left: 15px;
-    /* Desfase para crear el efecto de capas */
-    z-index: 1;
-    /* Fondo detrás */
-}
-
-.foreground-square {
-    position: relative;
-    width: 800px;
-    /* Ancho del cuadrado */
-    height: 350px;
-    /* Altura igual al ancho */
-    background-color: rgb(214, 12, 153);
-    /* Color del primer plano */
-    z-index: 2;
-    /* Frente encima */
-    display: flex;
-    justify-content: center;
-    /* Centra el texto horizontalmente */
-    align-items: center;
-    /* Centra el texto verticalmente */
-}
-
-.foreground-square p {
-    margin: 10px;
-    color: white;
-    /* Color del texto */
-    font-size: 27px;
-    /* Tamaño del texto */
-    text-align: center;
-    /* Centra el texto */
-    font-family: 'Bangers', sans-serif;
-    /* Fuente personalizada */
-    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
-    /* Sombras */
-}
-
-.tooltip {
-    color: rgb(255, 251, 0);
-    /* Cambia el color de la palabra */
-    position: relative;
-    /* Para posicionar el tooltip */
-    cursor: pointer;
-    /* Indica que es interactivo */
-}
-
-.tooltip::after {
-    content: attr(data-tooltip);
-    /* Muestra el contenido del atributo */
-    position: absolute;
-    bottom: 150%;
-    /* Ajusta la posición vertical */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Color del fondo del tooltip */
-    color: white;
-    /* Color del texto */
-    padding: 10px;
-    /* Incrementa el padding para mayor espacio interno */
-    font-size: 27px;
-    /* Ajusta el tamaño del texto */
-    white-space: nowrap;
-    /* Evita que el texto se divida en líneas */
-    width: 400px;
-    /* Establece un ancho fijo */
-    height: 30px;
-    /* Ajusta la altura automáticamente al contenido */
-    text-align: center;
-    /* Centra el texto */
-    opacity: 0;
-    /* Oculta el tooltip inicialmente */
-    pointer-events: none;
-    /* Evita que interfiera con el cursor */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Sombra para mejor visibilidad */
-    border-radius: 0;
-    /* Tooltip rectangular */
-    left: -200px;
-    top: -15px;
-}
-
-.tooltip:hover::after {
-    opacity: 1;
-    /* Muestra el tooltip al pasar el cursor */
-    transform: translateX(-50%) translateY(-5px);
-    /* Añade un ligero desplazamiento para efecto */
-}
-
-.tooltip2 {
-    color: rgb(255, 251, 0);
-    /* Cambia el color de la palabra */
-    position: relative;
-    /* Para posicionar el tooltip */
-    cursor: pointer;
-    /* Indica que es interactivo */
-}
-
-.tooltip2::after {
-    content: attr(data-tooltip);
-    /* Muestra el contenido del atributo */
-    position: absolute;
-    bottom: 150%;
-    /* Ajusta la posición vertical */
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Color del fondo del tooltip */
-    color: white;
-    /* Color del texto */
-    padding: 10px;
-    /* Incrementa el padding para mayor espacio interno */
-    font-size: 27px;
-    /* Ajusta el tamaño del texto */
-    width: 250px;
-    /* Establece un ancho fijo */
-    height: 180px;
-    /* Ajusta la altura automáticamente al contenido */
-    text-align: center;
-    /* Centra el texto */
-    opacity: 0;
-    /* Oculta el tooltip inicialmente */
-    pointer-events: none;
-    /* Evita que interfiera con el cursor */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Sombra para mejor visibilidad */
-    left: 110px;
-}
-
-.tooltip2:hover::after {
-    opacity: 1;
-    /* Muestra el tooltip al pasar el cursor */
-    transform: translateX(-50%) translateY(-5px);
-    /* Añade un ligero desplazamiento para efecto */
-}
-
-.tooltip3 {
-    color: rgb(255, 251, 0);
-    /* Cambia el color de la palabra */
-    position: relative;
-    /* Para posicionar el tooltip */
-    cursor: pointer;
-    /* Indica que es interactivo */
-}
-
-.tooltip3::after {
-    content: attr(data-tooltip);
-    /* Muestra el contenido del atributo */
-    position: absolute;
-    bottom: 150%;
-    /* Ajusta la posición vertical */
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Color del fondo del tooltip */
-    color: white;
-    /* Color del texto */
-    padding: 10px;
-    /* Incrementa el padding para mayor espacio interno */
-    font-size: 27px;
-    /* Ajusta el tamaño del texto */
-    width: 250px;
-    /* Establece un ancho fijo */
-    height: 180px;
-    /* Ajusta la altura automáticamente al contenido */
-    text-align: center;
-    /* Centra el texto */
-    opacity: 0;
-    /* Oculta el tooltip inicialmente */
-    pointer-events: none;
-    /* Evita que interfiera con el cursor */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Sombra para mejor visibilidad */
-    left: 80px;
-}
-
-.tooltip3:hover::after {
-    opacity: 1;
-    /* Muestra el tooltip al pasar el cursor */
-    transform: translateX(-50%) translateY(-5px);
-    /* Añade un ligero desplazamiento para efecto */
-}
-
-.tooltip4 {
-    color: rgb(255, 251, 0);
-    /* Cambia el color de la palabra */
-    position: relative;
-    /* Para posicionar el tooltip */
-    cursor: pointer;
-    /* Indica que es interactivo */
-}
-
-.tooltip4::after {
-    content: attr(data-tooltip);
-    /* Muestra el contenido del atributo */
-    position: absolute;
-    bottom: 150%;
-    /* Ajusta la posición vertical */
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Color del fondo del tooltip */
-    color: white;
-    /* Color del texto */
-    padding: 10px;
-    /* Incrementa el padding para mayor espacio interno */
-    font-size: 27px;
-    /* Ajusta el tamaño del texto */
-    width: 250px;
-    /* Establece un ancho fijo */
-    height: 130px;
-    /* Ajusta la altura automáticamente al contenido */
-    text-align: center;
-    /* Centra el texto */
-    opacity: 0;
-    /* Oculta el tooltip inicialmente */
-    pointer-events: none;
-    /* Evita que interfiera con el cursor */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Sombra para mejor visibilidad */
-    left: 80px;
-}
-
-.tooltip4:hover::after {
-    opacity: 1;
-    /* Muestra el tooltip al pasar el cursor */
-    transform: translateX(-50%) translateY(-5px);
-    /* Añade un ligero desplazamiento para efecto */
-}
-
-.tooltip5 {
-    color: rgb(255, 251, 0);
-    /* Cambia el color de la palabra */
-    position: relative;
-    /* Para posicionar el tooltip */
-    cursor: pointer;
-    /* Indica que es interactivo */
-}
-
-.tooltip5::after {
-    content: attr(data-tooltip);
-    /* Muestra el contenido del atributo */
-    position: absolute;
-    bottom: 150%;
-    /* Ajusta la posición vertical */
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Color del fondo del tooltip */
-    color: white;
-    /* Color del texto */
-    padding: 10px;
-    /* Incrementa el padding para mayor espacio interno */
-    font-size: 27px;
-    /* Ajusta el tamaño del texto */
-    width: 250px;
-    /* Establece un ancho fijo */
-    height: 150px;
-    /* Ajusta la altura automáticamente al contenido */
-    text-align: center;
-    /* Centra el texto */
-    opacity: 0;
-    /* Oculta el tooltip inicialmente */
-    pointer-events: none;
-    /* Evita que interfiera con el cursor */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Sombra para mejor visibilidad */
-    left: 80px;
-}
-
-.tooltip5:hover::after {
-    opacity: 1;
-    /* Muestra el tooltip al pasar el cursor */
-    transform: translateX(-50%) translateY(-5px);
-    /* Añade un ligero desplazamiento para efecto */
-}
-
-.tooltip6 {
-    color: rgb(255, 251, 0);
-    /* Cambia el color de la palabra */
-    position: relative;
-    /* Para posicionar el tooltip */
-    cursor: pointer;
-    /* Indica que es interactivo */
-}
-
-.tooltip6::after {
-    content: attr(data-tooltip);
-    /* Muestra el contenido del atributo */
-    position: absolute;
-    bottom: 150%;
-    /* Ajusta la posición vertical */
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Color del fondo del tooltip */
-    color: white;
-    /* Color del texto */
-    padding: 10px;
-    /* Incrementa el padding para mayor espacio interno */
-    font-size: 27px;
-    /* Ajusta el tamaño del texto */
-    width: 250px;
-    /* Establece un ancho fijo */
-    height: 260px;
-    /* Ajusta la altura automáticamente al contenido */
-    text-align: center;
-    /* Centra el texto */
-    opacity: 0;
-    /* Oculta el tooltip inicialmente */
-    pointer-events: none;
-    /* Evita que interfiera con el cursor */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Sombra para mejor visibilidad */
-    left: 80px;
-}
-
-.tooltip6:hover::after {
-    opacity: 1;
-    /* Muestra el tooltip al pasar el cursor */
-    transform: translateX(-50%) translateY(-5px);
-    /* Añade un ligero desplazamiento para efecto */
-}
-
-.tooltip7 {
-    color: rgb(255, 251, 0);
-    /* Cambia el color de la palabra */
-    position: relative;
-    /* Para posicionar el tooltip */
-    cursor: pointer;
-    /* Indica que es interactivo */
-}
-
-.tooltip7::after {
-    content: attr(data-tooltip);
-    /* Muestra el contenido del atributo */
-    position: absolute;
-    bottom: 150%;
-    /* Ajusta la posición vertical */
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Color del fondo del tooltip */
-    color: white;
-    /* Color del texto */
-    padding: 10px;
-    /* Incrementa el padding para mayor espacio interno */
-    font-size: 20px;
-    /* Ajusta el tamaño del texto */
-    width: 230px;
-    /* Establece un ancho fijo */
-    height: 130px;
-    /* Ajusta la altura automáticamente al contenido */
-    text-align: center;
-    /* Centra el texto */
-    opacity: 0;
-    /* Oculta el tooltip inicialmente */
-    pointer-events: none;
-    /* Evita que interfiera con el cursor */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Sombra para mejor visibilidad */
-    left: 83px;
-    top: 50px;
-    z-index: 1;
-}
-
-.tooltip7:hover::after {
-    opacity: 1;
-    /* Muestra el tooltip al pasar el cursor */
-    transform: translateX(-50%) translateY(-5px);
-    /* Añade un ligero desplazamiento para efecto */
-}
-
-.tooltip8 {
-    color: rgb(255, 251, 0);
-    /* Cambia el color de la palabra */
-    position: relative;
-    /* Para posicionar el tooltip */
-    cursor: pointer;
-    /* Indica que es interactivo */
-}
-
-.tooltip8::after {
-    content: attr(data-tooltip);
-    /* Muestra el contenido del atributo */
-    position: absolute;
-    bottom: 150%;
-    /* Ajusta la posición vertical */
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Color del fondo del tooltip */
-    color: white;
-    /* Color del texto */
-    padding: 10px;
-    /* Incrementa el padding para mayor espacio interno */
-    font-size: 20px;
-    /* Ajusta el tamaño del texto */
-    width: 230px;
-    /* Establece un ancho fijo */
-    height: 130px;
-    /* Ajusta la altura automáticamente al contenido */
-    text-align: center;
-    /* Centra el texto */
-    opacity: 0;
-    /* Oculta el tooltip inicialmente */
-    pointer-events: none;
-    /* Evita que interfiera con el cursor */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Sombra para mejor visibilidad */
-    left: 110px;
-    top: 50px;
-}
-
-.tooltip8:hover::after {
-    opacity: 1;
-    /* Muestra el tooltip al pasar el cursor */
-    transform: translateX(-50%) translateY(-5px);
-    /* Añade un ligero desplazamiento para efecto */
-}
-
-.tooltip9 {
-    color: rgb(255, 251, 0);
-    /* Cambia el color de la palabra */
-    position: relative;
-    /* Para posicionar el tooltip */
-    cursor: pointer;
-    /* Indica que es interactivo */
-}
-
-.tooltip9::after {
-    content: attr(data-tooltip);
-    /* Muestra el contenido del atributo */
-    position: absolute;
-    bottom: 150%;
-    /* Ajusta la posición vertical */
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Color del fondo del tooltip */
-    color: white;
-    /* Color del texto */
-    padding: 10px;
-    /* Incrementa el padding para mayor espacio interno */
-    font-size: 20px;
-    /* Ajusta el tamaño del texto */
-    width: 230px;
-    /* Establece un ancho fijo */
-    height: 90px;
-    /* Ajusta la altura automáticamente al contenido */
-    text-align: center;
-    /* Centra el texto */
-    opacity: 0;
-    /* Oculta el tooltip inicialmente */
-    pointer-events: none;
-    /* Evita que interfiera con el cursor */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Sombra para mejor visibilidad */
-    left: -60px;
-    top: 30px;
-    z-index: 1;
-}
-
-.tooltip9:hover::after {
-    opacity: 1;
-    /* Muestra el tooltip al pasar el cursor */
-    transform: translateX(-50%) translateY(-5px);
-    /* Añade un ligero desplazamiento para efecto */
-}
-
-.tooltip10 {
-    color: rgb(255, 251, 0);
-    /* Cambia el color de la palabra */
-    position: relative;
-    /* Para posicionar el tooltip */
-    cursor: pointer;
-    /* Indica que es interactivo */
-}
-
-.tooltip10::after {
-    content: attr(data-tooltip);
-    /* Muestra el contenido del atributo */
-    position: absolute;
-    bottom: 150%;
-    /* Ajusta la posición vertical */
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Color del fondo del tooltip */
-    color: white;
-    /* Color del texto */
-    padding: 10px;
-    /* Incrementa el padding para mayor espacio interno */
-    font-size: 25px;
-    /* Ajusta el tamaño del texto */
-    width: 250px;
-    /* Establece un ancho fijo */
-    height: 110px;
-    /* Ajusta la altura automáticamente al contenido */
-    text-align: center;
-    /* Centra el texto */
-    opacity: 0;
-    /* Oculta el tooltip inicialmente */
-    pointer-events: none;
-    /* Evita que interfiera con el cursor */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Sombra para mejor visibilidad */
-    left: 10px;
-    top: -10px;
-}
-
-.tooltip10:hover::after {
-    opacity: 1;
-    /* Muestra el tooltip al pasar el cursor */
-    transform: translateX(-50%) translateY(-5px);
-    /* Añade un ligero desplazamiento para efecto */
-}
-
-.square-container2 {
-    position: absolute;
-    /* Posicionamiento personalizado */
-    top: 758px;
-    /* Ajusta según el diseño */
-    left: 120px;
-    /* Ajusta según el diseño */
-    width: 200px;
-    /* Ancho del rectángulo */
-    height: 10px;
-    /* Altura del rectángulo */
-}
-
-.background-square2 {
-    position: absolute;
-    width: 800px;
-    /* Ancho del cuadrado */
-    height: 201px;
-    /* Altura igual al ancho */
-    background-color: rgb(163, 9, 104);
-    /* Color de fondo */
-    top: -11px;
-    /* Desfase para crear el efecto de capas */
-    left: -18px;
-    /* Desfase para crear el efecto de capas */
-    z-index: 1;
-    /* Fondo detrás */
-}
-
-.foreground-square2 {
-    position: relative;
-    width: 766px;
-    /* Ancho del cuadrado */
-    height: 175px;
-    /* Altura igual al ancho */
-    background-color: rgb(214, 12, 153);
-    /* Color del primer plano */
-    z-index: 2;
-    /* Frente encima */
-    display: flex;
-    /* Centra el texto horizontalmente */
-    align-items: center;
-    /* Centra el texto verticalmente */
-}
-
-.foreground-square2 p {
-    margin: 90px;
-    color: white;
-    /* Color del texto */
-    font-size: 27px;
-    /* Tamaño del texto */
-    text-align: center;
-    /* Centra el texto */
-    font-family: 'Bangers', sans-serif;
-    /* Fuente personalizada */
-    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
-    /* Sombras */
-    left: 90px;
-    position: absolute;
-}
-
-.foreground-square2 img {
-    width: 150px;
-    height: auto;
-    left: 30px;
-    position: absolute;
-}
-
-.tooltip11 {
-    color: rgb(255, 251, 0);
-    /* Cambia el color de la palabra */
-    position: relative;
-    /* Para posicionar el tooltip */
-    cursor: pointer;
-    /* Indica que es interactivo */
-}
-
-.tooltip11::after {
-    content: attr(data-tooltip);
-    /* Muestra el contenido del atributo */
-    position: absolute;
-    bottom: 150%;
-    /* Ajusta la posición vertical */
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Color del fondo del tooltip */
-    color: white;
-    /* Color del texto */
-    padding: 10px;
-    /* Incrementa el padding para mayor espacio interno */
-    font-size: 24px;
-    /* Ajusta el tamaño del texto */
-    width: 250px;
-    /* Establece un ancho fijo */
-    height: 150px;
-    /* Ajusta la altura automáticamente al contenido */
-    text-align: center;
-    /* Centra el texto */
-    opacity: 0;
-    /* Oculta el tooltip inicialmente */
-    pointer-events: none;
-    /* Evita que interfiera con el cursor */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Sombra para mejor visibilidad */
-    left: 80px;
-}
-
-.tooltip11:hover::after {
-    opacity: 1;
-    /* Muestra el tooltip al pasar el cursor */
-    transform: translateX(-50%) translateY(-5px);
-    /* Añade un ligero desplazamiento para efecto */
-}
-
-.tooltip12 {
-    color: rgb(255, 251, 0);
-    /* Cambia el color de la palabra */
-    position: relative;
-    /* Para posicionar el tooltip */
-    cursor: pointer;
-    /* Indica que es interactivo */
-}
-
-.tooltip12::after {
-    content: attr(data-tooltip);
-    /* Muestra el contenido del atributo */
-    position: absolute;
-    bottom: 150%;
-    /* Ajusta la posición vertical */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Color del fondo del tooltip */
-    color: white;
-    /* Color del texto */
-    padding: 10px;
-    /* Incrementa el padding para mayor espacio interno */
-    font-size: 27px;
-    /* Ajusta el tamaño del texto */
-    white-space: nowrap;
-    /* Evita que el texto se divida en líneas */
-    width: 400px;
-    /* Establece un ancho fijo */
-    height: 30px;
-    /* Ajusta la altura automáticamente al contenido */
-    text-align: center;
-    /* Centra el texto */
-    opacity: 0;
-    /* Oculta el tooltip inicialmente */
-    pointer-events: none;
-    /* Evita que interfiera con el cursor */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Sombra para mejor visibilidad */
-    border-radius: 0;
-    /* Tooltip rectangular */
-    left: 60px;
-    top: -40px;
-}
-
-.tooltip12:hover::after {
-    opacity: 1;
-    /* Muestra el tooltip al pasar el cursor */
-    transform: translateX(-50%) translateY(-5px);
-    /* Añade un ligero desplazamiento para efecto */
+a:hover {
+    background-color: rgb(30, 210, 255);
 }
