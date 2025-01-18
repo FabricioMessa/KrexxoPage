@@ -76,7 +76,7 @@ body {
     position: relative;
     width: 150px;
     height: 150px;
-    background: repeating-conic-gradient(from var(--a), #fabfff 0%, #eb5de4 5%, transparent 5%, transparent 40%, #f1a2e4 50%);
+    background: repeating-conic-gradient(from var(--a), #748fe7 0%, #08fdfd 5%, transparent 5%, transparent 40%, #6391e6 50%);
     animation: animate 4s linear infinite;
     border-radius: 20px;
 }
@@ -101,7 +101,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: repeating-conic-gradient(from var(--a), #e86fec 0%, #9d2c97 5%, transparent 5%, transparent 40%, #d37fcf 50%);
+    background: repeating-conic-gradient(from var(--a), #797ae4 0%, #582c9d 5%, transparent 5%, transparent 40%, #609bdf 50%);
     animation: animate 4s linear infinite;
     animation-delay: -1s;
     border-radius: 20px;
@@ -117,10 +117,10 @@ body {
 
 .box img {
     position: absolute;
-    width: 89%;
-    height: 92%;
-    left: 6px;
-    top: 8px;
+    width: 85%;
+    height: 87%;
+    left: 12px;
+    top: 9px;
     border-radius: 10px;
 }
 
@@ -187,7 +187,7 @@ body {
 }
 
 .tittle p {
-    font-size: 40px;
+    font-size: 34px;
     text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
 }
 
@@ -223,7 +223,7 @@ body {
 }
 
 #titulo {
-    font-size: 40px;
+    font-size: 38px;
     margin: 0;
     text-shadow: -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black, 3px 3px 0px black;
 }
@@ -231,7 +231,7 @@ body {
 #descripcion {
     text-align: center;
     margin: 10px 0px 0px 0px;
-    font-size: 25px;
+    font-size: 30px;
     padding: 0px 15px 0px;
     text-shadow: -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black, 3px 3px 0px black;
 }
@@ -239,7 +239,7 @@ body {
 .reliquia {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .reliquia img {
@@ -257,7 +257,7 @@ body {
 }
 
 #titulo2 {
-    font-size: 40px;
+    font-size: 30px;
     margin: 0;
     text-shadow: -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black, 3px 3px 0px black;
 }
@@ -265,7 +265,21 @@ body {
 #descripcion2 {
     text-align: center;
     margin: 10px 0px 0px 0px;
-    font-size: 30px;
+    font-size: 26px;
+    padding: 0px 90px 0px;
+    text-shadow: -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black, 3px 3px 0px black;
+}
+
+#titulo3 {
+    font-size: 45px;
+    margin: 0;
+    text-shadow: -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black, 3px 3px 0px black;
+}
+
+#descripcion3 {
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+    font-size: 38px;
     padding: 0px 15px 0px;
     text-shadow: -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black, 3px 3px 0px black;
 }
@@ -322,7 +336,7 @@ body {
 
 .card .back p {
     letter-spacing: auto;
-    font-size: 26px;
+    font-size: 24px;
     margin-top: 25px;
     text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
 }
@@ -347,7 +361,7 @@ body {
 
 .skill-2 .card .back p {
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 35px;
     text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;    
 }
 
@@ -363,7 +377,7 @@ body {
 
 .skill-3 .card .back p {
     letter-spacing: 1px;
-    font-size: 19px;
+    font-size: 25px;
     text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;       
 }
 
@@ -394,14 +408,14 @@ body {
     font-size: 20px;
     color: white;
     padding: 10px;
-    width: 350px;
-    height: 25px;
+    width: 180px;
+    height: 20px;
     text-align: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    left: 84px;
+    left: 100px;
     top: -15px;
     z-index: 1;
 }
@@ -429,15 +443,16 @@ body {
     color: white;
     padding: 10px;
     font-size: 20px;
-    width: 430px;
-    height: 80px;
+    width: 180px;
+    height: 60px;
     text-align: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    left: 80px;
-    top: -70px;
+    left: 55px;
+    top: -10px;
+    z-index: 2;
 }
 
 .tooltip_2:hover::after {
@@ -463,15 +478,16 @@ body {
     color: white;
     padding: 10px;
     font-size: 20px;
-    width: 420px;
-    height: 65px;
+    width: 180px;
+    height: 150px;
     text-align: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    left: 80px;
-    top: -50px;
+    left: 33px;
+    top: -60px;
+    z-index: 2;
 }
 
 .tooltip_3:hover::after {
@@ -497,14 +513,14 @@ body {
     color: white;
     padding: 10px;
     font-size: 20px;
-    width: 420px;
-    height: 65px;
+    width: 180px;
+    height: 105px;
     text-align: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    left: 80px;
+    left: 100px;
     top: -50px;
 }
 
@@ -531,14 +547,14 @@ body {
     color: white;
     padding: 10px;
     font-size: 20px;
-    width: 320px;
-    height: 105px;
+    width: 180px;
+    height: 175px;
     text-align: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    left: 80px;
+    left: 15px;
     top: -50px;
 }
 
@@ -565,14 +581,14 @@ body {
     color: white;
     padding: 10px;
     font-size: 20px;
-    width: 420px;
-    height: 80px;
+    width: 180px;
+    height: 170px;
     text-align: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    left: 80px;
+    left: 15px;
     top: -50px;
     z-index: 2; 
 }
@@ -600,15 +616,15 @@ body {
     color: white;
     padding: 10px;
     font-size: 20px;
-    width: 170px;
-    height: 190px;
+    width: 180px;
+    height: 80px;
     text-align: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    left: 80px;
-    top: -50px;
+    left: 50px;
+    top: -20px;
 }
 
 .tooltip_7:hover::after {
@@ -634,14 +650,14 @@ body {
     color: white;
     padding: 10px;
     font-size: 20px;
-    width: 170px;
-    height: 175px;
+    width: 180px;
+    height: 85px;
     text-align: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    left: 50px;
+    left: 47px;
     top: -50px;
 }
 
@@ -667,16 +683,16 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
     padding: 10px;
-    font-size: 15px;
+    font-size: 16px;
     width: 180px;
-    height: 90px;
+    height: 50px;
     text-align: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    left: 90px;
-    top: 10px;
+    left: 50px;
+    top: -30px;
     z-index: 2;
 }
 
