@@ -1405,3 +1405,109 @@ canvas {
     box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
     /* Sombra azul */
 }
+/*==============================================================*/
+/*=========================== PVP 1VS1 =========================*/
+.contenedor1vs1 {
+    border: 2px solid red;
+    width: 1800px;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.subcontenedor1 {
+    border: 2px solid blue;
+    width: 100%;
+    height: auto;
+}
+
+.subcontenedor2 {
+    border: 2px solid purple;
+    width: 100%;
+    height: auto;
+}
+
+.subsubcontenedor1 {
+    border: 2px solid red;
+    width: auto;
+    width: auto;
+    display: grid;
+    position: absolute;
+    left: 340px;
+    top: 4750px;
+    justify-items: center;
+}
+
+.subsubcontenedor2 {
+    border: 2px solid red;
+    width: auto;
+    width: auto;
+    display: grid;
+    position: absolute;
+    left: 1400px;
+    top: 4750px;
+    justify-items: center;
+}
+
+#pvp1 {
+    border: 2px solid green;
+    width: 100%;
+    height: auto;
+}
+
+#pevepe {
+    width: 200px;
+    height: 200px;
+}
+
+#pvp2 {
+    border: 2px solid yellow;
+    width: 100%;
+    height: auto;
+}
+
+.pevepe1 {
+    width: 100px;
+    height: 100px;
+    background: none;
+}
+
+.pevepe2 {
+    width: 100px;
+    height: 100px;
+    background: none;
+}
+
+#imash1 {
+    border: 2px solid green;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 99px;
+    left: 5px;
+}
+
+#imash2 {
+    border: 2px solid green;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 99px;
+    left: 5px;
+}
+
+#eslot1 {
+    border: 2px solid purple;
+    width: 100px;
+    height: 100px;
+}
+
+#eslot2 {
+    border: 2px solid purple;
+    width: 100px;
+    height: 100px;
+}
