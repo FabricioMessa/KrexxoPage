@@ -328,18 +328,13 @@ body {
 /*============================================================*/
 /*====================== RECTANGULO ==========================*/
 .rectangulo-contenedor {
-    position: relative;
-    background-color: rgba(184, 184, 175, 0.37);
-    width: 1700px;
-    height: 200px;
+    width: 100%;
+    max-width: 1000px;
+    height: 150px;
+    margin: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
-    left: 70px;
-    top: 40px;
-    border-radius: 20px;
-    cursor: pointer;
 }
 
 .rectangulo-contenedor p{
@@ -356,15 +351,12 @@ body {
 /*===================== CARTAS DIOSAS ========================*/
 .card-group {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 25px;
-    margin: 30px;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    background-color: rgb(206, 203, 203);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(206, 203, 203, 0.1);
     border-radius: 10px;
-    padding: 25px 70px;
 }
 
 .card-group.active {
@@ -455,7 +447,7 @@ body {
 .contenedor-grande {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
     width: 100%;
     max-width: 1800px;
     margin: 0 auto;
