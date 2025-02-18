@@ -20,7 +20,8 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
     background-color: rgba(224, 224, 224, 0.548);
 }
@@ -28,7 +29,7 @@ body {
 /*====================== LATERAL BAR =========================*/
 .barra-lateral {
     width: 80px;
-    height: 100%;
+    height: 110%;
     overflow: hidden;
     padding: 20px 15px;
     background: white;
@@ -364,8 +365,6 @@ body {
     background-color: rgb(206, 203, 203);
     border-radius: 10px;
     padding: 25px 70px;
-    position: absolute;
-    z-index: 2;
 }
 
 .card-group.active {
@@ -452,13 +451,13 @@ body {
     position: relative;
     z-index: 2; /* Asegúrate de que el enlace esté por encima de otros elementos */
 }
+
 .contenedor-grande {
-    display: grid; /* Usa cuadrícula para un diseño ordenado */
-    gap: 20px; /* Espaciado entre los elementos */
-    justify-content: center; /* Centra horizontalmente */
-    align-content: center; /* Centra verticalmente */ /* Espaciado interno */
-    width: 100%; /* Se ajusta al ancho del contenedor */
-    max-width: 1800px; /* Ancho máximo */
-    position: relative; /* Posición relativa para los elementos internos */
-    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
