@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Personajes 7ds Grand Cross</title>
+		<link rel="stylesheet" href="/css/personajes.css"/>
+	</head>
+	<body>
+		<a href="index.html" class="home">
+			<ion-icon name="home"></ion-icon>
+		</a>
+		<section>
+			<div class="demonios" data-href="demonios.html"></div>
+			<div class="gigantes" data-href="#"></div>
+			<div class="humanos" data-href="#"></div>
+			<div class="hadas" data-href="#"></div>
+			<div class="diosas" data-href="#"></div>
+			<div class="desconocidos" data-href="#"></div>
+		</section>
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script>
+			document.querySelectorAll("section div").forEach((div) => {
+				div.style.cursor = "pointer";
+				div.addEventListener("click", () => {
+					window.location.href = div.dataset.href;
+				});
+			});
+		</script>
+	</body>
+</html>

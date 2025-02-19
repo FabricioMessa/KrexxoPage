@@ -1,0 +1,161 @@
+body {
+    background-color: rgb(48, 45, 45);
+    width: 1810px;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contenedor {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.card {
+    width: 236px;
+    height: 375px;
+    transform-style: preserve-3d;
+    transition: transform 0.1s;
+    position: relative; /* Añadido */
+    opacity: 1;
+    display: block;
+}
+
+.card.hidden {
+    display: none;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+}
+
+/* Añade un sutil brillo/resplandor */
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(125deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+.container2 {
+    width: 800px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 20px;
+    border-radius: 30px;
+    background-color: rgba(32, 28, 28, 0.63);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    max-width: 600px;
+}
+
+.search-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.search-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.search-button:hover {
+    opacity: 1;
+}
+
+.search-button ion-icon {
+    font-size: 24px;
+}
+
+.home {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background: white;
+    color: var(--color-texto);
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Añade opacity a la transición */
+    opacity: 0.2; /* Opacidad inicial al 20% */
+}
+
+.home:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+    opacity: 1; /* Opacidad al 100% cuando el mouse está sobre el enlace */
+}
+
+.home:active {
+    transform: scale(0.95); 
+    background-color: white;
+    transition: background-color 0.1s ease, transform 0.1s ease; 
+}
+
+.home:focus {
+    outline: 2px solid white;
+    transform: scale(1.02); 
+    transition: outline 0.2s ease, transform 0.2s ease;
+}
+
+.home ion-icon {
+    min-width: 50px;
+    font-size: 30px;
+}

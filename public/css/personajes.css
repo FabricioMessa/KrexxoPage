@@ -1,0 +1,129 @@
+body {
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgb(28, 28, 28);
+}
+
+section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+section div {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    transition: 500ms ease;
+    opacity: 0.8;
+}
+
+.demonios {
+    height: 100%;
+    width: 100%;
+    background-image: url(../characters/demonios.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.gigantes {
+    height: 100%;
+    width: 100%;
+    background-image: url(../characters/demonios.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.humanos {
+    height: 100%;
+    width: 100%;
+    background-image: url(../characters/demonios.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.hadas {
+    height: 100%;
+    width: 100%;
+    background-image: url(../characters/demonios.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.diosas {
+    height: 100%;
+    width: 100%;
+    background-image: url(../characters/demonios.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.desconocidos {
+    height: 100%;
+    width: 100%;
+    background-image: url(../characters/demonios.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+section div:hover {
+    width: 300%;
+    opacity: 1;
+    filter: contrast(200%);
+}
+
+section a {
+    width: 0;
+    flex-grow: 1;
+    transition: 500ms ease;
+    opacity: 0.8;
+}
+
+section a:hover {
+    width: 300%;
+    opacity: 1;
+    filter: contrast(200%);
+}
+
+.home {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background: white;
+    color: var(--color-texto);
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Añade opacity a la transición */
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+    opacity: 0.2; /* Opacidad inicial al 20% */
+}
+
+.home:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+    opacity: 1; /* Opacidad al 100% cuando el mouse está sobre el enlace */
+}
+
+.home:active {
+    transform: scale(0.95); 
+    background-color: white;
+    transition: background-color 0.1s ease, transform 0.1s ease; 
+}
+
+.home:focus {
+    outline: 2px solid white;
+    transform: scale(1.02); 
+    transition: outline 0.2s ease, transform 0.2s ease;
+}
+
+.home ion-icon {
+    min-width: 50px;
+    font-size: 30px;
+}
