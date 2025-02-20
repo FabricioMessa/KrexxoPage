@@ -415,7 +415,7 @@ body {
     pointer-events: none;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    left: 95px;
+    left: 30px;
     top: -40px;
     z-index: 1;
 }
