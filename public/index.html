@@ -1,81 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7DS Grand Cross</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-    <video autoplay muted loop class="background-video">
-        <source src="/src/videofondo.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
-    </video>
-    <div class="barra-lateral">
-        <div class="nombre-pagina">
-            <img src="/src/logoKrexxo.png" id="logo">
-            <span>Krexxo 7ds</span>
-        </div>
-        <button class="boton">
-            <ion-icon name="person-circle-outline"></ion-icon>
-            <span>Comunidad</span>
-        </button>
-        <nav class="navegacion">
-            <ul>
-                <li>
-                    <a href="personajes.html">
-                        <ion-icon name="people-outline"></ion-icon>
-                        <span>Personajes</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <ion-icon name="book-outline"></ion-icon>
-                        <span>Guías</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <ion-icon name="newspaper-outline"></ion-icon>
-                        <span>Novedades</span>
-                    </a>
-                </li>
-                <li>
-                    <a id="randomLink" href="random.html">
-                        <ion-icon name="shuffle-outline"></ion-icon>
-                        <span>Randomnizador</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="linea"></div>
-        <!-- Sección de redes sociales -->
-        <button class="botonRedes" onclick="window.open('https://www.youtube.com/@krexxo8315', '_blank')">
-            <ion-icon name="logo-youtube"></ion-icon>
-            <span>YouTube</span>
-        </button>
-        <button class="botonRedestu" onclick="window.open('https://www.tiktok.com/@krexxo_7ds?is_from_webapp=1&sender_device=pc', '_blank')">
-            <ion-icon name="logo-tiktok"></ion-icon>
-            <span>TikTok</span>
-        </button>
-        <button class="botonRedestri" onclick="window.open('https://www.facebook.com/Valentigrandcross?mibextid=ZbWKwL', '_blank')">
-            <ion-icon name="logo-facebook"></ion-icon>
-            <span>Facebook</span>
-        </button>
-    </div>
-    <!-- Modal para la contraseña -->
-    <div id="passwordModal" class="modal">
-        <div class="modal-content">
-            <h2>Introduce la contraseña</h2>
-            <input type="password" id="passwordInput" placeholder="Contraseña">
-            <div class="modal-buttons">
-                <button id="confirmButton">Confirmar</button>
-                <button id="cancelButton">Cancelar</button>
-            </div>
-        </div>
-    </div>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="/js/script.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>7DS Grand Cross</title>
+		<link rel="stylesheet" href="/css/styles.css" />
+	</head>
+	<body>
+		<video autoplay muted loop class="background-video">
+			<source src="/src/videofondo.mp4" type="video/mp4" />
+			Tu navegador no soporta el elemento de video.
+		</video>
+		<div class="barra-lateral">
+			<div class="nombre-pagina">
+				<img src="/src/logoKrexxo.png" id="logo" />
+				<span>Krexxo 7ds</span>
+			</div>
+			<a href="login.html" class="boton">
+				<ion-icon name="person-circle-outline"></ion-icon>
+				<span>Comunidad</span>
+			</a>
+			<nav class="navegacion">
+				<ul>
+					<li>
+						<a href="personajes.html">
+							<ion-icon name="people-outline"></ion-icon>
+							<span>Personajes</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<ion-icon name="book-outline"></ion-icon>
+							<span>Guías</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<ion-icon name="newspaper-outline"></ion-icon>
+							<span>Novedades</span>
+						</a>
+					</li>
+					<li>
+						<a id="randomLink" href="random.html">
+							<ion-icon name="shuffle-outline"></ion-icon>
+							<span>Randomnizador</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="linea"></div>
+			<!-- Sección de redes sociales -->
+			<button
+				class="botonRedes"
+				onclick="window.open('https://www.youtube.com/@krexxo8315', '_blank')">
+				<ion-icon name="logo-youtube"></ion-icon>
+				<span>YouTube</span>
+			</button>
+			<button
+				class="botonRedestu"
+				onclick="window.open('https://www.tiktok.com/@krexxo_7ds?is_from_webapp=1&sender_device=pc', '_blank')">
+				<ion-icon name="logo-tiktok"></ion-icon>
+				<span>TikTok</span>
+			</button>
+			<button
+				class="botonRedestri"
+				onclick="window.open('https://www.facebook.com/Valentigrandcross?mibextid=ZbWKwL', '_blank')">
+				<ion-icon name="logo-facebook"></ion-icon>
+				<span>Facebook</span>
+			</button>
+		</div>
+		<!-- Modal para la contraseña -->
+		<div id="passwordModal" class="modal">
+			<div class="modal-content">
+				<h2>Introduce la contraseña</h2>
+				<input
+					type="password"
+					id="passwordInput"
+					placeholder="Contraseña" />
+				<div class="modal-buttons">
+					<button id="confirmButton">Confirmar</button>
+					<button id="cancelButton">Cancelar</button>
+				</div>
+			</div>
+		</div>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script src="/js/script.js"></script>
+	</body>
 </html>

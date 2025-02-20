@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Comunidad - Krexx</title>
+		<link rel="stylesheet" href="/css/comunidad.css" />
+	</head>
+	<body>
+		<div class="comments-section">
+			<div class="comments-header">
+				<a href="/index.html" class="back-button">
+					<ion-icon name="arrow-back-outline"></ion-icon>
+					<span>Volver al inicio</span>
+				</a>
+				<h1>Comunidad Krexxo</h1>
+			</div>
+
+			<form id="comment-form">
+				<div class="form-group">
+					<textarea
+						id="comment-content"
+						placeholder="Escribe tu comentario..."
+						required></textarea>
+				</div>
+				<button type="submit">Enviar comentario</button>
+			</form>
+
+			<div id="comments-container">
+				<!-- Los comentarios se cargarán aquí -->
+			</div>
+		</div>
+
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script src="/js/comunidad.js"></script>
+	</body>
+</html>
