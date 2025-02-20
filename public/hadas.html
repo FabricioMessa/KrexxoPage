@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Raza - Hada</title>
+        <link rel="stylesheet" href="/css/hadas.css">
+	</head>
+	<body>
+        <div class="container2">
+            <a href="personajes.html" class="home">
+			    <ion-icon name="home"></ion-icon>
+		    </a>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar personaje..." class="search-input">
+                <button class="search-button">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="card" data-href="pj1.html"><img src="/cards/031 - [El Pecado de la Pereza del Oso] King el Rey Hada - LR.png" width="236" height="375"></div>
+            <div class="card" data-href="pj2.html"><img src="/cards/032 - [Los diez Mandamientos] Gloxinia del Reposo - LR.png" width="236" height="375"></div>
+            <div class="card" data-href="pj3.html"><img src="/cards/035 - [Linaje de héroe] Joven caballero Lancelot.png" width="236" height="375"></div>
+            <div class="card" data-href="pj4.html"><img src="/cards/036 - [Tres mil años de recuerdos] Consejera Gerheade.png" width="236" height="375"></div>
+            <div class="card" data-href="pj5.html"><img src="/cards/037 - [Demonio de élite] Gloxinia del Reposo.png" width="236" height="375"></div>
+            <div class="card" data-href="pj6.html"><img src="/cards/038 - [Promesa cumplida] Elaine de alas doradas.png" width="236" height="375"></div>
+            <div class="card" data-href="pj7.html"><img src="/cards/039 - [Aroma primaveral] Elaine de alas doradas.png" width="236" height="375"></div>
+            <div class="card" data-href="pj8.html"><img src="/cards/040 - [Hada de las bendiciones] Elaine de alas doradas.png" width="236" height="375"></div>
+            <div class="card" data-href="pj9.html"><img src="/cards/041 - [Halloween] Guardiana Elaine.png" width="236" height="375"></div>
+            <div class="card" data-href="pj10.html"><img src="/cards/042 - [Dulce tentación] Guardiana Elaine.png" width="236" height="375"></div>
+            <div class="card" data-href="pj11.html"><img src="/cards/043 - [Bosque del Rey Hada] Guardiana Elaine.png" width="236" height="375"></div>
+            <div class="card" data-href="pj12.html"><img src="/cards/044 - [Reencarnación de la Venganza] Hada Helbram.png" width="236" height="375"></div>
+            <div class="card" data-href="pj13.html"><img src="/cards/045 - [Realeza] Hada Helbram.png" width="236" height="375"></div>
+            <div class="card" data-href="pj14.html"><img src="/cards/046 - [Guardián del bosque] Hada Helbram.png" width="236" height="375"></div>
+            <div class="card" data-href="pj15.html"><img src="/cards/047 - [Tirano tuerto] Cardenal Helbram.png" width="236" height="375"></div>
+            <div class="card" data-href="pj16.html"><img src="/cards/048 - [Gelatina dulce] King con alas nuevas.png" width="236" height="375"></div>
+            <div class="card" data-href="pj17.html"><img src="/cards/049 - [Indicios de madurez] King con alas nuevas.png" width="236" height="375"></div>
+            <div class="card" data-href="pj18.html"><img src="/cards/050 - [Símbolo de unidad] Rey Hada Harlequin.png" width="236" height="375"></div>
+            <div class="card" data-href="pj19.html"><img src="/cards/051 - [Rey protector] Rey Hada Harlequin.png" width="236" height="375"></div>
+            <div class="card" data-href="pj20.html"><img src="/cards/052 - [Desastre] Old Fart King.png" width="236" height="375"></div>
+            <div class="card" data-href="pj21.html"><img src="/cards/053 - Los [Seven Deadly Sins] Old Fart King.png" width="236" height="375"></div>
+            <div class="card" data-href="pj22.html"><img src="/cards/054 - [Protector de muñecas] Old Fart King.png" width="236" height="375"></div>
+            <div class="card" data-href="pj23.html"><img src="/cards/055 - [Harlequin] King el Rey Hada.png" width="236" height="375"></div>
+            <div class="card" data-href="pj24.html"><img src="/cards/056 - [Guardián del bosque] King el Rey Hada.png" width="236" height="375"></div>
+        </div>
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const cards = document.querySelectorAll('.card');
+
+            // Función para normalizar texto (quitar acentos y caracteres especiales)
+            function normalizeText(text) {
+                return text.toLowerCase()
+                    .normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '')
+                    .replace(/[^a-z0-9\s]/g, ' ')
+                    .trim();
+            }
+
+            // Función de filtrado mejorada
+            function filterCards(searchTerm) {
+                const normalizedSearch = normalizeText(searchTerm);
+                
+                cards.forEach(card => {
+                    const img = card.querySelector('img');
+                    const fileName = img.src.split('/').pop(); // Obtiene el nombre del archivo
+                    const decodedFileName = decodeURIComponent(fileName); // Decodifica el nombre del archivo
+                    const normalizedFileName = normalizeText(decodedFileName);
+                    
+                    if (normalizedFileName.includes(normalizedSearch)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Efecto 3D para todas las cartas
+            cards.forEach(div => {
+                // Efecto de cursor pointer y redirección
+                div.style.cursor = 'pointer';
+                div.addEventListener('click', () => {
+                    window.location.href = div.dataset.href;
+                });
+
+                // Efecto 3D
+                div.addEventListener('mousemove', (e) => {
+                    const rect = div.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const xPercent = (x / rect.width) * 100;
+                    const yPercent = (y / rect.height) * 100;
+                    
+                    const rotateY = ((xPercent - 50) / 50) * 20;
+                    const rotateX = -((yPercent - 50) / 50) * 20;
+                    
+                    div.style.transform = `
+                        perspective(1000px)
+                        rotateX(${rotateX}deg)
+                        rotateY(${rotateY}deg)
+                        scale3d(1.05, 1.05, 1.05)
+                    `;
+                });
+
+                // Resetear la posición
+                div.addEventListener('mouseleave', () => {
+                    div.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+                });
+            });
+
+            // Evento input para búsqueda en tiempo real
+            searchInput.addEventListener('input', (e) => {
+                filterCards(e.target.value);
+            });
+
+            // Evento para la tecla Enter
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    filterCards(searchInput.value);
+                }
+            });
+
+            // Evento para el botón de búsqueda
+            document.querySelector('.search-button').addEventListener('click', () => {
+                filterCards(searchInput.value);
+            });
+        });
+    </script>
+</html>

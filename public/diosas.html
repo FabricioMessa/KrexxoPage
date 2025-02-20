@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Raza - Diosas</title>
+        <link rel="stylesheet" href="/css/diosas.css">
+	</head>
+	<body>
+        <div class="container2">
+            <a href="personajes.html" class="home">
+			    <ion-icon name="home"></ion-icon>
+		    </a>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar personaje..." class="search-input">
+                <button class="search-button">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="card" data-href="personaje3.html"><img src="/cards/001 - [Nueva leyenda] Princesa Elizabeth - LR.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje2.html"><img src="/cards/002 - [Gracia del Destello] Ludociel, pacto de luz - LR.png" width="236" height="375"></div>
+            <div class="card" data-href="perso1.html"><img src="/cards/005 - [Luz de la Guerra Santa] Elizabeth y Meliodas.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje4.html"><img src="/cards/006 - [Los cuatro Arcángeles] Mael de Luz solar.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje5.html"><img src="/cards/007 - [Los cuatro Arcángeles] Sariel del Tornado.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje6.html"><img src="/cards/008 - [Gracia del Océano] Sariel, pacto de luz.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje7.html"><img src="/cards/009 - [Los cuatro Arcángeles] Tarmiel del Océano.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje28.html"><img src="/cards/010 - [Gracia del Océano] Tarmiel, pacto de luz.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje8.html"><img src="/cards/011 - [Los cuatro Arcángeles] Ludociel del Destello.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje9.html"><img src="/cards/012 - [Representante divino] Ludociel del Destello.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje10.html"><img src="/cards/013 - [Espejismo estival] Ludociel, pacto de luz.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje11.html"><img src="/cards/014 - [Justicia pura] La Celestial Ellatte.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje12.html"><img src="/cards/015 - [Protectora del templo celestial] La Celestial Ellatte.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje13.html"><img src="/cards/016 - [Alas celestiales] La Celestial Ellatte.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje14.html"><img src="/cards/017 - [Fragmento de memoria] Caballero de Danafor Liz.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje15.html"><img src="/cards/018 - [Regalo de la felicidad] Caballero de Danafor Liz.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje16.html"><img src="/cards/019 - [Ilución de una noche estrellada] Caballero de Danafor Liz.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje17.html"><img src="/cards/020 - [Fantasía primaveral] Diosa Elizabeth.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje18.html"><img src="/cards/021 - [Guerrera Sagrada] Diosa Elizabeth.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje19.html"><img src="/cards/022 - [Protección brillante] Reina Elizabeth.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje20.html"><img src="/cards/023 - [Recuerdos recuperados] Elizabeth del renacer eterno.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje21.html"><img src="/cards/024 - [Rollo estival] Guardián Hawk y Elizabeth.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje22.html"><img src="/cards/025 - [Reverso] Guardián Hawk y Elizabeth.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje23.html"><img src="/cards/026 - [Mascota] Hawk y Elizabeth.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje24.html"><img src="/cards/027 - [Taberna itinerante] Hawk y Elizabeth.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje25.html"><img src="/cards/028 - Taberna [Boar Hat] Mesera Elizabeth.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje26.html"><img src="/cards/029 - [Una nueva aventura] Princesa Elizabeth.png" width="236" height="375"></div>
+            <div class="card" data-href="personaje27.html"><img src="/cards/030 - [Liones] Princesa Elizabeth.png" width="236" height="375"></div>
+        </div>
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const cards = document.querySelectorAll('.card');
+
+            // Función para normalizar texto (quitar acentos y caracteres especiales)
+            function normalizeText(text) {
+                return text.toLowerCase()
+                    .normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '')
+                    .replace(/[^a-z0-9\s]/g, ' ')
+                    .trim();
+            }
+
+            // Función de filtrado mejorada
+            function filterCards(searchTerm) {
+                const normalizedSearch = normalizeText(searchTerm);
+                
+                cards.forEach(card => {
+                    const img = card.querySelector('img');
+                    const fileName = img.src.split('/').pop(); // Obtiene el nombre del archivo
+                    const decodedFileName = decodeURIComponent(fileName); // Decodifica el nombre del archivo
+                    const normalizedFileName = normalizeText(decodedFileName);
+                    
+                    if (normalizedFileName.includes(normalizedSearch)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Efecto 3D para todas las cartas
+            cards.forEach(div => {
+                // Efecto de cursor pointer y redirección
+                div.style.cursor = 'pointer';
+                div.addEventListener('click', () => {
+                    window.location.href = div.dataset.href;
+                });
+
+                // Efecto 3D
+                div.addEventListener('mousemove', (e) => {
+                    const rect = div.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const xPercent = (x / rect.width) * 100;
+                    const yPercent = (y / rect.height) * 100;
+                    
+                    const rotateY = ((xPercent - 50) / 50) * 20;
+                    const rotateX = -((yPercent - 50) / 50) * 20;
+                    
+                    div.style.transform = `
+                        perspective(1000px)
+                        rotateX(${rotateX}deg)
+                        rotateY(${rotateY}deg)
+                        scale3d(1.05, 1.05, 1.05)
+                    `;
+                });
+
+                // Resetear la posición
+                div.addEventListener('mouseleave', () => {
+                    div.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+                });
+            });
+
+            // Evento input para búsqueda en tiempo real
+            searchInput.addEventListener('input', (e) => {
+                filterCards(e.target.value);
+            });
+
+            // Evento para la tecla Enter
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    filterCards(searchInput.value);
+                }
+            });
+
+            // Evento para el botón de búsqueda
+            document.querySelector('.search-button').addEventListener('click', () => {
+                filterCards(searchInput.value);
+            });
+        });
+    </script>
+</html>
