@@ -23,7 +23,7 @@ section div {
 .demonios {
     height: 100%;
     width: 100%;
-    background-image: url(../characters/demonios.jpg);
+    background-image: url(../characters/Demonios.png);
     background-position: center;
     background-size: cover;
 }
@@ -31,7 +31,7 @@ section div {
 .gigantes {
     height: 100%;
     width: 100%;
-    background-image: url(../characters/demonios.jpg);
+    background-image: url(../characters/Gigantes.png);
     background-position: center;
     background-size: cover;
 }
@@ -39,7 +39,7 @@ section div {
 .humanos {
     height: 100%;
     width: 100%;
-    background-image: url(../characters/demonios.jpg);
+    background-image: url(../characters/Humanos.png);
     background-position: center;
     background-size: cover;
 }
@@ -47,7 +47,7 @@ section div {
 .hadas {
     height: 100%;
     width: 100%;
-    background-image: url(../characters/demonios.jpg);
+    background-image: url(../characters/Hadas.png);
     background-position: center;
     background-size: cover;
 }
@@ -55,7 +55,7 @@ section div {
 .diosas {
     height: 100%;
     width: 100%;
-    background-image: url(../characters/diosas.png);
+    background-image: url(../characters/Diosas.png);
     background-position: center;
     background-size: cover;
 }
@@ -63,7 +63,7 @@ section div {
 .desconocidos {
     height: 100%;
     width: 100%;
-    background-image: url(../characters/demonios.jpg);
+    background-image: url(../characters/Desconocidos.png);
     background-position: center;
     background-size: cover;
 }
@@ -71,7 +71,7 @@ section div {
 section div:hover {
     width: 300%;
     opacity: 1;
-    filter: contrast(200%);
+    filter: contrast(120%);
 }
 
 section a {
@@ -84,7 +84,7 @@ section a {
 section a:hover {
     width: 300%;
     opacity: 1;
-    filter: contrast(200%);
+    filter: contrast(120%);
 }
 
 .home {
