@@ -15,6 +15,7 @@ section {
 section div {
     width: 0;
     flex-grow: 1;
+    object-fit: cover;
     transition: 500ms ease;
     opacity: 0.8;
     will-change: width, opacity;
