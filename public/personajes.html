@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Personajes 7ds Grand Cross</title>
-		<link rel="stylesheet" href="/css/personajes.css"/>
+		<link rel="stylesheet" href="/css/personajes.css" />
+		<link rel="preload" as="image" href="/characters/Demonios.png" />
+		<link rel="preload" as="image" href="/characters/Gigantes.png" />
+		<link rel="preload" as="image" href="/characters/Humanos.png" />
+		<link rel="preload" as="image" href="/characters/Hadas.png" />
+		<link rel="preload" as="image" href="/characters/diosas.png" />
+		<link rel="preload" as="image" href="/characters/Desconocidos.png" />
 	</head>
 	<body>
 		<a href="index.html" class="home">
 			<ion-icon name="home"></ion-icon>
 		</a>
 		<section>
-			<div class="demonios" data-href="demonios.html"></div>
-			<div class="gigantes" data-href="#"></div>
-			<div class="humanos" data-href="#"></div>
-			<div class="hadas" data-href="hadas.html"></div>
-			<div class="diosas" data-href="diosas.html"></div>
-			<div class="desconocidos" data-href="#"></div>
+			<div class="demonios" data-href="demonios.html" loading="lazy"></div>
+			<div class="gigantes" data-href="#" loading="lazy"></div>
+			<div class="humanos" data-href="#" loading="lazy"></div>
+			<div class="hadas" data-href="hadas.html" loading="lazy"></div>
+			<div class="diosas" data-href="diosas.html" loading="lazy"></div>
+			<div class="desconocidos" data-href="#" loading="lazy"></div>
 		</section>
 		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

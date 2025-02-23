@@ -15,57 +15,51 @@ section {
 section div {
     width: 0;
     flex-grow: 1;
-    object-fit: cover;
     transition: 500ms ease;
     opacity: 0.8;
+    will-change: width, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Clase base común para todas las imágenes */
+.demonios, .gigantes, .humanos, .hadas, .diosas, .desconocidos {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+    image-rendering: optimizeQuality;
 }
 
 .demonios {
-    height: 100%;
-    width: 100%;
+    background-color: #333; /* Color placeholder */
     background-image: url(../characters/Demonios.png);
-    background-position: center;
-    background-size: cover;
 }
 
 .gigantes {
-    height: 100%;
-    width: 100%;
+    background-color: #333;
     background-image: url(../characters/Gigantes.png);
-    background-position: center;
-    background-size: cover;
 }
 
 .humanos {
-    height: 100%;
-    width: 100%;
+    background-color: #333;
     background-image: url(../characters/Humanos.png);
-    background-position: center;
-    background-size: cover;
 }
 
 .hadas {
-    height: 100%;
-    width: 100%;
+    background-color: #333;
     background-image: url(../characters/Hadas.png);
-    background-position: center;
-    background-size: cover;
 }
 
 .diosas {
-    height: 100%;
-    width: 100%;
+    background-color: #333;
     background-image: url(../characters/diosas.png);
-    background-position: center;
-    background-size: cover;
 }
 
 .desconocidos {
-    height: 100%;
-    width: 100%;
+    background-color: #333;
     background-image: url(../characters/Desconocidos.png);
-    background-position: center;
-    background-size: cover;
 }
 
 section div:hover {
@@ -96,34 +90,41 @@ section a:hover {
     border-radius: 10px;
     background: white;
     color: var(--color-texto);
-    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Añade opacity a la transición */
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
     position: absolute;
     z-index: 1;
     top: 20px;
     left: 20px;
-    opacity: 0.2; /* Opacidad inicial al 20% */
+    opacity: 0.2;
+    will-change: transform, opacity;
+    transform: translateZ(0);
 }
 
 .home:hover {
     background-color: white;
     color: black;
     transform: scale(1.05);
-    opacity: 1; /* Opacidad al 100% cuando el mouse está sobre el enlace */
+    opacity: 1;
 }
 
 .home:active {
-    transform: scale(0.95); 
+    transform: scale(0.95);
     background-color: white;
-    transition: background-color 0.1s ease, transform 0.1s ease; 
+    transition: background-color 0.1s ease, transform 0.1s ease;
 }
 
 .home:focus {
     outline: 2px solid white;
-    transform: scale(1.02); 
+    transform: scale(1.02);
     transition: outline 0.2s ease, transform 0.2s ease;
 }
 
 .home ion-icon {
     min-width: 50px;
     font-size: 30px;
+}
+
+/* Clase para cuando la imagen esté completamente cargada */
+.loaded {
+    transition: background-image 0.5s ease-in;
 }
