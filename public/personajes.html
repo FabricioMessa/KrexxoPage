@@ -31,34 +31,12 @@
 			nomodule
 			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 		<script>
-			// Esperar a que el DOM esté cargado
-			document.addEventListener("DOMContentLoaded", function () {
-				// Precargar imágenes
-				const divs = document.querySelectorAll("section div");
-
-				divs.forEach((div) => {
-					// Mantener el cursor pointer
-					div.style.cursor = "pointer";
-
-					// Precargar la imagen de fondo
-					const backgroundImage = getComputedStyle(div).backgroundImage;
-					const imageUrl = backgroundImage.slice(5, -2); // Remover 'url()'
-
-					const img = new Image();
-					img.src = imageUrl;
-
-					// Cuando la imagen cargue, asegurar la opacidad correcta
-					img.onload = function () {
-						div.classList.add("loaded");
-						div.style.opacity = "0.8";
-					};
-
-					// Mantener el evento de click original
-					div.addEventListener("click", () => {
-						window.location.href = div.dataset.href;
-					});
-				});
-			});
+            document.querySelectorAll("section div").forEach((div) => {
+                div.style.cursor = "pointer";
+                div.addEventListener("click", () => {
+                    window.location.href = div.dataset.href;
+                });
+            });
 		</script>
 	</body>
 </html>
