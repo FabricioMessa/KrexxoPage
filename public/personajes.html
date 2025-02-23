@@ -27,12 +27,93 @@
 		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 		<script>
-			document.querySelectorAll("section div").forEach((div) => {
-				div.style.cursor = "pointer";
-				div.addEventListener("click", () => {
-					window.location.href = div.dataset.href;
+			// Esperar a que el DOM esté completamente cargado
+			document.addEventListener("DOMContentLoaded", function () {
+				// Seleccionar todos los divs de la sección
+				const divs = document.querySelectorAll("section div");
+
+				// Configurar la navegación al hacer clic
+				divs.forEach((div) => {
+					div.style.cursor = "pointer";
+
+					// Precargar las imágenes
+					const backgroundImage = getComputedStyle(div).backgroundImage;
+					const imageUrl = backgroundImage.slice(5, -2); // Remover 'url()' del string
+
+					const img = new Image();
+					img.src = imageUrl;
+
+					// Cuando la imagen termine de cargar, añadir la clase 'loaded'
+					img.onload = function () {
+						div.classList.add("loaded");
+						div.style.opacity = "0.8";
+					};
+
+					// Manejar el clic para la navegación
+					div.addEventListener("click", () => {
+						const href = div.dataset.href;
+						if (href && href !== "#") {
+							window.location.href = href;
+						}
+					});
 				});
+
+				// Función para manejar el hover con mejor rendimiento
+				let hoverTimeout;
+				divs.forEach((div) => {
+					div.addEventListener("mouseenter", () => {
+						clearTimeout(hoverTimeout);
+						requestAnimationFrame(() => {
+							div.style.width = "300%";
+							div.style.opacity = "1";
+						});
+					});
+
+					div.addEventListener("mouseleave", () => {
+						hoverTimeout = setTimeout(() => {
+							requestAnimationFrame(() => {
+								div.style.width = "0";
+								div.style.opacity = "0.8";
+							});
+						}, 50); // Pequeño delay para suavizar la transición
+					});
+				});
+
+				// Optimizar el botón de home
+				const homeButton = document.querySelector(".home");
+				if (homeButton) {
+					homeButton.addEventListener("mouseenter", () => {
+						requestAnimationFrame(() => {
+							homeButton.style.opacity = "1";
+						});
+					});
+
+					homeButton.addEventListener("mouseleave", () => {
+						requestAnimationFrame(() => {
+							homeButton.style.opacity = "0.2";
+						});
+					});
+				}
 			});
+
+			// Prevenir que las imágenes se arrastren (opcional, pero mejora la experiencia)
+			document.addEventListener("dragstart", (e) => {
+				if (e.target.tagName === "DIV") {
+					e.preventDefault();
+				}
+			});
+
+			// Manejar errores de carga de imágenes
+			window.addEventListener(
+				"error",
+				function (e) {
+					if (e.target.tagName === "IMG") {
+						console.error("Error loading image:", e.target.src);
+						// Podrías implementar aquí una imagen de fallback si lo deseas
+					}
+				},
+				true
+			);
 		</script>
 	</body>
 </html>
