@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 80px 20px 50px 20px;
+    font-family: 'Bangers', sans-serif;
+    background-color: black;
+}
+
+.principal {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #38093e;
+    border-radius: 15px;
+}
+/*=================================================================*/
+.demonicBeast {
+    height: 400px;
+    background-image: url(/backgrounds/demonicbeast.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.demonicBeast img {
+    width: 950px;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.tittles {
+    position: absolute;
+    color: white;
+    font-size: 150px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 100px;
+    text-shadow: -4px -4px 0px black, 4px -4px 0px black, -4px 4px 0px black, 4px 4px 0px black;
+}
+
+.demonicBeast-link:hover .demonicBeast {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+/*=================================================================*/
+.demonKing {
+    height: 400px;
+    background-image: url(/backgrounds/demonking.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -120px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 25px; 
+}
+
+.tittles2 {
+    position: absolute;
+    color: white;
+    font-size: 150px;
+    position: absolute;
+    display: flex;
+    gap: 40px;
+    left: 1025px;
+    text-shadow: -4px -4px 0px black, 4px -4px 0px black, -4px 4px 0px black, 4px 4px 0px black;
+}
+
+.demonKing-link:hover .demonKing {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+/*=================================================================*/
+.bossEvent {
+    height: 400px;
+    background-image: url(/backgrounds/banner2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 25px; 
+}
+
+.image1 {
+    width: 498px;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 25px;
+}
+
+.image2 {
+    width: 380px;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 25px;
+}
+
+.tittles3 {
+    position: absolute;
+    color: white;
+    font-size: 150px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 700px;
+    text-shadow: -4px -4px 0px black, 4px -4px 0px black, -4px 4px 0px black, 4px 4px 0px black;
+}
+
+.bossEvent-link:hover .bossEvent {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+/*=================================================================*/
+.finalBoss {
+    height: 400px;
+    background-image: url(/backgrounds/finalboss.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 25px; 
+}
+
+.image3 {
+    width: 550px;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 25px;
+}
+
+.image4 {
+    width: 550px;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 25px;
+}
+
+.tittles4 {
+    position: absolute;
+    color: white;
+    font-size: 150px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 700px;
+    text-shadow: -4px -4px 0px black, 4px -4px 0px black, -4px 4px 0px black, 4px 4px 0px black;
+}
+
+.finalBoss-link:hover .finalBoss {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+/*=================================================================*/
+.deathmatch {
+    height: 400px;
+    background-image: url(/backgrounds/deathmatch.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 25px; 
+}
+
+.tittles5 {
+    position: absolute;
+    color: white;
+    font-size: 150px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 700px;
+    text-shadow: -4px -4px 0px black, 4px -4px 0px black, -4px 4px 0px black, 4px 4px 0px black;
+}
+
+.deathmatch-link:hover .deathmatch {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+/*=================================================================*/
+.guildboss {
+    height: 400px;
+    background-image: url(/backgrounds/deathmatch.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 25px; 
+}
+
+.tittles6 {
+    position: absolute;
+    color: white;
+    font-size: 150px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 700px;
+    text-shadow: -4px -4px 0px black, 4px -4px 0px black, -4px 4px 0px black, 4px 4px 0px black;
+}
+
+.guildboss-link:hover .guildboss {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.home {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    background-color: rgb(85, 9, 85);
+    border-radius: 10px;
+    transition: background-color 0.5s;
+}
+
+.home ion-icon {
+    color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+}
+
+.home:hover {
+    background-color: rgb(216, 46, 238);
+}
