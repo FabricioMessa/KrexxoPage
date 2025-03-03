@@ -30,7 +30,6 @@
 }
 
 body {
-
     height: 100vh;
     width: 100%;
     background-color: transparent;
@@ -163,7 +162,6 @@ body {
 .barra-lateral .navegacion ion-icon {
     min-width: 50px;
     font-size: 30px;
-
 }
 /*============================================================*/
 /*========================= LÍNEA ============================*/
@@ -278,7 +276,6 @@ body {
     transition: transform 0.2s ease, outline 0.2s ease;
 }
 
-/* Opcional: Estilo para el span dentro del botón (puedes mantenerlo si deseas animaciones separadas) */
 .barra-lateral .botonRedes span {
     display: inline-block;
     transition: color 0.3s ease;
@@ -325,7 +322,6 @@ body {
     transition: transform 0.2s ease, outline 0.2s ease;
 }
 
-/* Opcional: Estilo para el span dentro del botón (puedes mantenerlo si deseas animaciones separadas) */
 .barra-lateral .botonRedestu span {
     display: inline-block;
     transition: color 0.3s ease;
@@ -371,7 +367,6 @@ body {
     transition: transform 0.2s ease, outline 0.2s ease;
 }
 
-/* Opcional: Estilo para el span dentro del botón (puedes mantenerlo si deseas animaciones separadas) */
 .barra-lateral .botonRedestri span {
     display: inline-block;
     transition: color 0.3s ease;
@@ -380,4 +375,121 @@ body {
 .barra-lateral .botonRedestri ion-icon {
     min-width: 50px;
     font-size: 25px;
+}
+
+/*============================================================*/
+/*======================= SUB-MENU ===========================*/
+/* Estilos para el icono de flecha */
+.icono-flecha {
+    margin-left: auto;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotar flecha cuando se abre el menú */
+.menu-desplegable.activo .icono-flecha {
+    transform: rotate(180deg);
+}
+
+/* Estilos para el botón de guías */
+.boton-guias {
+    justify-content: space-between;
+}
+
+/* Estilo para el menú desplegable */
+.menu-desplegable {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Estilos base para el submenú */
+.barra-lateral .navegacion .menu-desplegable .submenu {
+    display: block; /* Cambiado de none a block */
+    list-style: none;
+    background-color: white;
+    border-radius: 8px;
+    padding: 0;
+    margin-top: 5px;
+    margin-left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    overflow: hidden;
+    max-height: 0; /* Comienza cerrado */
+    opacity: 0; /* Añadimos opacidad */
+    transform: translateY(-10px); /* Ligero desplazamiento para la animación */
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* Estilos para el submenú activo */
+.barra-lateral .navegacion .menu-desplegable .submenu.mostrar {
+    max-height: 300px;
+    padding: 5px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    opacity: 1; /* Totalmente visible */
+    transform: translateY(0); /* Sin desplazamiento */
+    overflow: visible;
+}
+
+/* Estilos para los elementos del submenú */
+.submenu li {
+    width: 100%;
+    margin: 0 !important;
+    margin-top: 5px !important;
+    margin-bottom: 8px !important;
+}
+
+.submenu li:last-child {
+    margin-bottom: 3px !important;
+}
+
+.submenu a {
+    padding-left: 15px;
+    height: 35px !important;
+    background-color: #f5f5f5;
+}
+
+/* Asegurarse de que los spans en el submenú permanezcan visibles */
+.submenu span, .submenu li a span {
+    opacity: 1 !important;
+    width: auto !important;
+}
+
+/* Asegurarse de que los spans del submenú siempre sean visibles cuando se muestra */
+.submenu.mostrar span {
+    opacity: 1 !important;
+    width: auto !important;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+/* Configuración para cuando la barra lateral está en modo mini */
+.mini-barra-lateral .submenu {
+    margin-left: 5px;
+}
+
+.mini-barra-lateral .navegacion .menu-desplegable .submenu.mostrar {
+    position: absolute;
+    left: 70px;
+    top: 0;
+    width: 150px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+/* Configuración para cuando la barra lateral está en modo normal */
+.barra-lateral:not(.mini-barra-lateral) .navegacion .menu-desplegable .submenu.mostrar {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
 }
