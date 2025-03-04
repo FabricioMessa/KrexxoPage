@@ -1,0 +1,1155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Bangers', sans-serif;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-image: linear-gradient(323deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 16.667%,rgba(46, 46, 46, 0.01) 16.667%, rgba(46, 46, 46, 0.01) 33.334%,rgba(226, 226, 226, 0.01) 33.334%, rgba(226, 226, 226, 0.01) 50.001000000000005%,rgba(159, 159, 159, 0.01) 50.001%, rgba(159, 159, 159, 0.01) 66.668%,rgba(149, 149, 149, 0.01) 66.668%, rgba(149, 149, 149, 0.01) 83.33500000000001%,rgba(43, 43, 43, 0.01) 83.335%, rgba(43, 43, 43, 0.01) 100.002%),linear-gradient(346deg, rgba(166, 166, 166, 0.03) 0%, rgba(166, 166, 166, 0.03) 25%,rgba(240, 240, 240, 0.03) 25%, rgba(240, 240, 240, 0.03) 50%,rgba(121, 121, 121, 0.03) 50%, rgba(121, 121, 121, 0.03) 75%,rgba(40, 40, 40, 0.03) 75%, rgba(40, 40, 40, 0.03) 100%),linear-gradient(347deg, rgba(209, 209, 209, 0.01) 0%, rgba(209, 209, 209, 0.01) 25%,rgba(22, 22, 22, 0.01) 25%, rgba(22, 22, 22, 0.01) 50%,rgba(125, 125, 125, 0.01) 50%, rgba(125, 125, 125, 0.01) 75%,rgba(205, 205, 205, 0.01) 75%, rgba(205, 205, 205, 0.01) 100%),linear-gradient(84deg, rgba(195, 195, 195, 0.01) 0%, rgba(195, 195, 195, 0.01) 14.286%,rgba(64, 64, 64, 0.01) 14.286%, rgba(64, 64, 64, 0.01) 28.572%,rgba(67, 67, 67, 0.01) 28.572%, rgba(67, 67, 67, 0.01) 42.858%,rgba(214, 214, 214, 0.01) 42.858%, rgba(214, 214, 214, 0.01) 57.144%,rgba(45, 45, 45, 0.01) 57.144%, rgba(45, 45, 45, 0.01) 71.42999999999999%,rgba(47, 47, 47, 0.01) 71.43%, rgba(47, 47, 47, 0.01) 85.71600000000001%,rgba(172, 172, 172, 0.01) 85.716%, rgba(172, 172, 172, 0.01) 100.002%),linear-gradient(73deg, rgba(111, 111, 111, 0.03) 0%, rgba(111, 111, 111, 0.03) 16.667%,rgba(202, 202, 202, 0.03) 16.667%, rgba(202, 202, 202, 0.03) 33.334%,rgba(57, 57, 57, 0.03) 33.334%, rgba(57, 57, 57, 0.03) 50.001000000000005%,rgba(197, 197, 197, 0.03) 50.001%, rgba(197, 197, 197, 0.03) 66.668%,rgba(97, 97, 97, 0.03) 66.668%, rgba(97, 97, 97, 0.03) 83.33500000000001%,rgba(56, 56, 56, 0.03) 83.335%, rgba(56, 56, 56, 0.03) 100.002%),linear-gradient(132deg, rgba(88, 88, 88, 0.03) 0%, rgba(88, 88, 88, 0.03) 20%,rgba(249, 249, 249, 0.03) 20%, rgba(249, 249, 249, 0.03) 40%,rgba(2, 2, 2, 0.03) 40%, rgba(2, 2, 2, 0.03) 60%,rgba(185, 185, 185, 0.03) 60%, rgba(185, 185, 185, 0.03) 80%,rgba(196, 196, 196, 0.03) 80%, rgba(196, 196, 196, 0.03) 100%),linear-gradient(142deg, rgba(160, 160, 160, 0.03) 0%, rgba(160, 160, 160, 0.03) 12.5%,rgba(204, 204, 204, 0.03) 12.5%, rgba(204, 204, 204, 0.03) 25%,rgba(108, 108, 108, 0.03) 25%, rgba(108, 108, 108, 0.03) 37.5%,rgba(191, 191, 191, 0.03) 37.5%, rgba(191, 191, 191, 0.03) 50%,rgba(231, 231, 231, 0.03) 50%, rgba(231, 231, 231, 0.03) 62.5%,rgba(70, 70, 70, 0.03) 62.5%, rgba(70, 70, 70, 0.03) 75%,rgba(166, 166, 166, 0.03) 75%, rgba(166, 166, 166, 0.03) 87.5%,rgba(199, 199, 199, 0.03) 87.5%, rgba(199, 199, 199, 0.03) 100%),linear-gradient(238deg, rgba(116, 116, 116, 0.02) 0%, rgba(116, 116, 116, 0.02) 20%,rgba(141, 141, 141, 0.02) 20%, rgba(141, 141, 141, 0.02) 40%,rgba(152, 152, 152, 0.02) 40%, rgba(152, 152, 152, 0.02) 60%,rgba(61, 61, 61, 0.02) 60%, rgba(61, 61, 61, 0.02) 80%,rgba(139, 139, 139, 0.02) 80%, rgba(139, 139, 139, 0.02) 100%),linear-gradient(188deg, rgba(227, 227, 227, 0.01) 0%, rgba(227, 227, 227, 0.01) 20%,rgba(105, 105, 105, 0.01) 20%, rgba(105, 105, 105, 0.01) 40%,rgba(72, 72, 72, 0.01) 40%, rgba(72, 72, 72, 0.01) 60%,rgba(33, 33, 33, 0.01) 60%, rgba(33, 33, 33, 0.01) 80%,rgba(57, 57, 57, 0.01) 80%, rgba(57, 57, 57, 0.01) 100%),linear-gradient(90deg, hsl(237,0%,13%),hsl(237,0%,13%));
+}
+
+.swing-in-top-bck {
+	-webkit-animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+	        animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+@-webkit-keyframes swing-in-top-bck {
+  0% {
+    -webkit-transform: rotateX(70deg);
+            transform: rotateX(70deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-top-bck {
+  0% {
+    -webkit-transform: rotateX(70deg);
+            transform: rotateX(70deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+/* =================================================================*/
+/* ========================== PÁJARO ===============================*/
+/* =================================================================*/
+.bird {
+    height: 800px;
+    background-image: url(../backgrounds/demonicbeast.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 20px;
+    animation: swing-in-top-bck 1.5s ease-in;
+}
+
+.tittle-bird {
+    color: white;
+    font-size: 100px;
+    text-shadow: -4px -4px 0px black, 4px -4px 0px black, -4px 4px 0px black, 4px 4px 0px black;
+    position: absolute;
+    top: 30px;
+    left: 250px;
+}
+
+.bird-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 790px;
+    height: 790px;
+    border-radius: 20px;
+}
+/*--------------------------------------------------------------*/
+.bird-equip1 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 150px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.bird-char {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-bird {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-bird-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutubird1 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutubird1:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutubird1 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/*--------------------------------------------------------------*/
+.bird-equip2 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 360px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.bird-char2 {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-bird2 {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-bird-img2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutubird2 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutubird2:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutubird2 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/*--------------------------------------------------------------*/
+.bird-equip3 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 580px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.bird-char3 {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-bird3 {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-bird-img3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutubird3 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutubird3:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutubird3 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/* =================================================================*/
+/* ========================== CIERVO ===============================*/
+/* =================================================================*/
+.ciervo {
+    height: 800px;
+    background-image: url(../backgrounds/demonicbeast.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 20px;
+    animation: swing-in-top-bck 1.5s ease-in;
+}
+
+.tittle-ciervo {
+    color: white;
+    font-size: 100px;
+    text-shadow: -4px -4px 0px black, 4px -4px 0px black, -4px 4px 0px black, 4px 4px 0px black;
+    position: absolute;
+    top: 30px;
+    left: 250px;
+}
+
+.ciervo-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 790px;
+    height: 790px;
+    border-radius: 20px;
+}
+/*--------------------------------------------------------------*/
+.ciervo-equip1 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 150px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.ciervo-char {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-ciervo {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-ciervo-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutuciervo1 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutuciervo1:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutuciervo1 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/*--------------------------------------------------------------*/
+.ciervo-equip2 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 360px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.ciervo-char2 {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-ciervo2 {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-ciervo-img2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutuciervo2 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutuciervo2:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutuciervo2 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/*--------------------------------------------------------------*/
+.ciervo-equip3 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 580px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.ciervo-char3 {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-ciervo3 {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-ciervo-img3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutuciervo3 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutuciervo3:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutuciervo3 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/* =================================================================*/
+/* =========================== LOBOS ===============================*/
+/* =================================================================*/
+.lobos {
+    height: 800px;
+    background-image: url(../backgrounds/demonicbeast.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 20px;
+    animation: swing-in-top-bck 1.5s ease-in;
+}
+
+.tittle-lobos {
+    color: white;
+    font-size: 100px;
+    text-shadow: -4px -4px 0px black, 4px -4px 0px black, -4px 4px 0px black, 4px 4px 0px black;
+    position: absolute;
+    top: 30px;
+    left: 250px;
+}
+
+.lobos-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 790px;
+    height: 790px;
+    border-radius: 20px;
+}
+/*--------------------------------------------------------------*/
+.lobos-equip1 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 150px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.lobos-char {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-lobos {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-lobos-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutulobos1 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutulobos1:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutulobos1 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/*--------------------------------------------------------------*/
+.lobos-equip2 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 360px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.lobos-char2 {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-lobos2 {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-lobos-img2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutulobos2 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutulobos2:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutulobos2 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/*--------------------------------------------------------------*/
+.lobos-equip3 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 580px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.lobos-char3 {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-lobos3 {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-lobos-img3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutulobos3 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutulobos3:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutulobos3 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/* =================================================================*/
+/* ========================== DRAGÓN ===============================*/
+/* =================================================================*/
+.dragon {
+    height: 800px;
+    background-image: url(../backgrounds/demonicbeast.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 20px;
+    animation: swing-in-top-bck 1.5s ease-in;
+}
+
+.tittle-dragon {
+    color: white;
+    font-size: 100px;
+    text-shadow: -4px -4px 0px black, 4px -4px 0px black, -4px 4px 0px black, 4px 4px 0px black;
+    position: absolute;
+    top: 30px;
+    left: 250px;
+}
+
+.dragon-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 790px;
+    height: 790px;
+    border-radius: 20px;
+}
+/*--------------------------------------------------------------*/
+.dragon-equip1 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 150px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.dragon-char {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-dragon {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-dragon-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutudragon1 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutudragon1:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutudragon1 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/*--------------------------------------------------------------*/
+.dragon-equip2 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 360px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.dragon-char2 {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-dragon2 {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-dragon-img2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutudragon2 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutudragon2:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutudragon2 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/*--------------------------------------------------------------*/
+.dragon-equip3 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 580px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.dragon-char3 {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-dragon3 {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-dragon-img3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutudragon3 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutudragon3:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutudragon3 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/* =================================================================*/
+/* ========================== ARDILLA ==============================*/
+/* =================================================================*/
+.ardilla {
+    height: 800px;
+    background-image: url(../backgrounds/demonicbeast.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 20px;
+    animation: swing-in-top-bck 1.5s ease-in;
+}
+
+.tittle-ardilla {
+    color: white;
+    font-size: 100px;
+    text-shadow: -4px -4px 0px black, 4px -4px 0px black, -4px 4px 0px black, 4px 4px 0px black;
+    position: absolute;
+    top: 30px;
+    left: 250px;
+}
+
+.ardilla-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 790px;
+    height: 790px;
+    border-radius: 20px;
+}
+/*--------------------------------------------------------------*/
+.ardilla-equip1 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 150px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.ardilla-char {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-ardilla {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-ardilla-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutuardilla1 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutuardilla1:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutuardilla1 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/*--------------------------------------------------------------*/
+.ardilla-equip2 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 360px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.ardilla-char2 {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-ardilla2 {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-ardilla-img2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutuardilla2 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutuardilla2:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutuardilla2 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
+/*--------------------------------------------------------------*/
+.ardilla-equip3 {
+    width: 920px;
+    height: 180px;
+    position: absolute;
+    left: 30px;
+    top: 580px;
+    background-color: rgba(224, 220, 216, 0.5);
+}
+
+.ardilla-char3 {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    left: 50px;
+    bottom: 0;
+}
+
+.text-ardilla3 {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    font-size: 30px;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+
+.char-ardilla-img3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.yutuardilla3 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 120px;
+    bottom: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.yutuardilla3:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.yutuardilla3 ion-icon {
+    color: red;
+    width: 70%;
+    height: 70%;
+}
